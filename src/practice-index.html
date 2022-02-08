@@ -1,93 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <div class="sidebar-container">
+  </head>
+  <body>
+    <div class="content">
+      <div class="sidebar-container">
         <div class="sidebar-top">
-        <div class="menu">Menu</div>
-        <div class="hide">Hide</div>
+          <div class="menu">Menu</div>
+          <div class="action_one">Plan your next list</div>
         </div>
-        <div class="actions"> <h1>ACTIONS</h1>
-          <div class="action_one">Plan tomorrow's list</div>
+        <div class="actions">
+          <h1>ACTIONS</h1>
+          <div class="action_two">Today</div>
+          <div class="action_three">Upcoming</div>
         </div>
-        <div class="history"> <h1>HISTORY</h1>
+        <div class="history">
+          <h1>HISTORY</h1>
           <ul>
-            <li>Thursday</li>
+            <li>Title</li>
+            <li>Title</li>
           </ul>
         </div>
       </div>
 
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+      <div class="main-container">
+        <h2>Title</h2>
+      </div>
+    </div>
 
-        *, *::before, *::after {
-        box-sizing: border-box;
-        }
-        * {
-        margin: 0;
-        }
-        
-        html, body {
-        height: 100%;
-        font-family: 'Source Serif 4', sans-serif;
-        }
-        body {
-        line-height: 1.5;
-        }
-        img, picture, video, canvas, svg {
-        display: block;
-        max-width: 100%;
-        }
-        input, button, textarea, select {
-        font: inherit;
-        }
-        p, h1, h2, h3, h4, h5, h6 {
-        overflow-wrap: break-word;
-        hyphens: auto;
-        }
-        
-        .sidebar-container {
-          display: flex;
-          flex-direction: column;
-          margin: 25px;
-        }
-        
-        .sidebar-top {
-          font-size: 15px;
-          display: flex;
-          flex-direction: row;
-          gap: 15px;
-          padding-bottom: 25px;
-        }
-        
-        h1 {
-          font-size: 14px;
-          padding: 0;
-          padding-bottom: 10px;
-        }
-        
-        .action_one {
-          font-size: 13px;
-        }
-        
-        li {
-          font-size: 12px;
-        }
-        
-        .actions, .history {
-          font-size: 14px;
-          font-weight: 500;
-          padding-bottom: 15px;
-        }
-        
-        .hide {
-          font-size: 15px;
-          margin: 0;
-        }</style>
-</body>
+    <style>
+     @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+*, *::before, *::after {
+box-sizing: border-box;
+}
+* {
+margin: 0;
+}
+
+html, body {
+height: 100%;
+font-family: 'Rubik', sans-serif;
+}
+
+body {
+line-height: 1.5;
+}
+
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+}
+
+input, button, textarea, select {
+font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+overflow-wrap: break-word;
+hyphens: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  margin: 25px; 
+  margin-top: 65px;
+  gap: 90px;
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-top {
+  font-size: 15px;
+  padding-bottom: 25px;
+}
+
+.menu {
+  font-weight: 850;
+}
+
+h1 {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0;
+  padding-bottom: 10px;
+}
+
+h2 {
+  font-size: 14px;
+}
+
+.action_one {
+  font-size: 13px;
+}
+
+ul {
+  margin-left: -10px;
+}
+
+li {
+  font-size: 13px;
+}
+
+.actions, .history {
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+
+.main-container {
+  display: flex;
+}
+    </style>
+  </body>
 </html>
