@@ -7,130 +7,149 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="content">
+      <div class="sidebar-container">
+        <div class="sidebar-top">
+          <div class="menu">Menu</div>
+          <div class="action_one">Plan your next list</div>
+        </div>
+        <div class="actions">
+          <h1>ACTIONS</h1>
+          <div class="action_one">Today</div>
+          <div class="action_two">Upcoming</div>
+        </div>
+        <div class="history">
+          <h1>HISTORY</h1>
+          <ul>
+            <li class="task-title">Review five films</li>
+            <li class="task-title">Order pizza</li>
+          </ul>
+        </div>
+      </div>
 
-    <div class="content"><div class="sidebar-container">
-      <div class="sidebar-top">
-      <div class="menu">Menu</div>
-      <div class="action_one">Plan your next list </div>
-    
+      <div class="main-container">
+        <h2 class="history-task-title">Today</h2>
+        <div class="task">
+          <p>Pet kitty</p>
+        </div>
       </div>
-      <div class="actions"> <h1>ACTIONS</h1>
-        <div class="action_two">Today</div>
-        <div class="action_three">Upcoming</div>
-      </div>
-      <div class="history"> <h1>HISTORY</h1>
-        <ul>
-          <li class="task-title">Review five films
-          <li class="task-title">Order pizza</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="main-container"> 
-      <h2 class="history-task-title">Today</h2>  
-      <div class="task">
-        <p>Pet kitty</p>
-      </div>
-      
-     </div>
-      
-      
     </div>
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 
-*, *::before, *::after {
-box-sizing: border-box;
-}
-* {
-margin: 0;
-}
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      * {
+        margin: 0;
+      }
 
-html, body {
-height: 100%;
-font-family: 'Rubik', sans-serif;
-}
+      html,
+      body {
+        height: 100%;
+        font-family: "Rubik", sans-serif;
+      }
 
-body {
-line-height: 1.5;
-}
+      body {
+        line-height: 1.5;
+      }
 
-img, picture, video, canvas, svg {
-display: block;
-max-width: 100%;
-}
+      img,
+      picture,
+      video,
+      canvas,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
 
-input, button, textarea, select {
-font: inherit;
-}
+      input,
+      button,
+      textarea,
+      select {
+        font: inherit;
+      }
 
-p, h1, h2, h3, h4, h5, h6 {
-overflow-wrap: break-word;
-hyphens: auto;
-}
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        overflow-wrap: break-word;
+        hyphens: auto;
+      }
 
-.content {
-  display: flex;
-  flex-direction: row;
-  margin: 25px; 
-  margin-top: 65px;
-  gap: 90px;
-}
+      .content {
+        display: flex;
+        flex-direction: row;
+        margin: 25px;
+        margin-top: 65px;
+        gap: 90px;
+      }
 
-.sidebar-container {
-  display: flex;
-  flex-direction: column;
-}
+      .sidebar-container {
+        display: flex;
+        flex-direction: column;
+      }
 
-.sidebar-top {
-  font-size: 15px;
-  padding-bottom: 35px;
-}
+      .sidebar-top {
+        font-size: 15px;
+        padding-bottom: 35px;
+      }
 
-.menu {
-  font-weight: 850;
-}
+      .menu {
+        font-weight: 850;
+      }
 
-h1 {
-  font-size: 13px;
-  font-weight: 600;
-  padding: 0;
-  padding-bottom: 10px;
-}
+      h1 {
+        font-size: 13px;
+        font-weight: 600;
+        padding: 0;
+        padding-bottom: 10px;
+      }
 
-h2 {
-  font-size: 14px;
-}
+      h2 {
+        font-size: 14px;
+      }
 
-.action_one {
-  font-size: 13px;
-}
+      .action_one {
+        font-size: 13px;
+      }
 
-li {
-  font-size: 13px;
-  list-style: inside;
-}
+      li {
+        font-size: 13px;
+        list-style: inside;
+      }
 
-ul {
-  margin-left: -40px; 
-}
+      ul {
+        margin-left: -40px;
+      }
 
-.actions, .history {
-  font-size: 14px;
-  font-weight: 500;
-  padding-bottom: 15px;
-}
+      .actions,
+      .history {
+        font-size: 14px;
+        font-weight: 500;
+        padding-bottom: 15px;
+      }
 
-.main-container {
-  display: flex;
-  flex-direction: column;
-}
+      .main-container {
+        display: flex;
+        flex-direction: column;
+      }
 
-.history-task-title {
-  font-size: 17px;
-  padding-bottom: 46px;
-}
+      .history-task-title {
+        font-size: 17px;
+        padding-bottom: 46px;
+      }
 
-</style>
+      .action_one:hover,
+      .action_two:hover {
+        text-decoration: underline hsl(247, 93%, 51%);
+      }
+    </style>
   </body>
 </html>
