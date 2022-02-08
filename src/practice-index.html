@@ -7,33 +7,37 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="content">
-      <div class="sidebar-container">
-        <div class="sidebar-top">
-          <div class="menu">Menu</div>
-          <div class="action_one">Plan your next list</div>
-        </div>
-        <div class="actions">
-          <h1>ACTIONS</h1>
-          <div class="action_two">Today</div>
-          <div class="action_three">Upcoming</div>
-        </div>
-        <div class="history">
-          <h1>HISTORY</h1>
-          <ul>
-            <li>Title</li>
-            <li>Title</li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="main-container">
-        <h2>Title</h2>
+    <div class="content"><div class="sidebar-container">
+      <div class="sidebar-top">
+      <div class="menu">Menu</div>
+      <div class="action_one">Plan your next list </div>
+    
+      </div>
+      <div class="actions"> <h1>ACTIONS</h1>
+        <div class="action_two">Today</div>
+        <div class="action_three">Upcoming</div>
+      </div>
+      <div class="history"> <h1>HISTORY</h1>
+        <ul>
+          <li class="task-title">Review five films
+          <li class="task-title">Order pizza</li>
+        </ul>
       </div>
     </div>
-
+    
+    <div class="main-container"> 
+      <h2 class="history-task-title">Today</h2>  
+      <div class="task">
+        <p>Pet kitty</p>
+      </div>
+      
+     </div>
+      
+      
+    </div>
     <style>
-     @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
 *, *::before, *::after {
 box-sizing: border-box;
@@ -80,7 +84,7 @@ hyphens: auto;
 
 .sidebar-top {
   font-size: 15px;
-  padding-bottom: 25px;
+  padding-bottom: 35px;
 }
 
 .menu {
@@ -102,12 +106,13 @@ h2 {
   font-size: 13px;
 }
 
-ul {
-  margin-left: -10px;
-}
-
 li {
   font-size: 13px;
+  list-style: inside;
+}
+
+ul {
+  margin-left: -40px; 
 }
 
 .actions, .history {
@@ -118,7 +123,14 @@ li {
 
 .main-container {
   display: flex;
+  flex-direction: column;
 }
-    </style>
+
+.history-task-title {
+  font-size: 17px;
+  padding-bottom: 46px;
+}
+
+</style>
   </body>
 </html>
