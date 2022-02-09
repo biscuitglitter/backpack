@@ -35,7 +35,7 @@ hyphens: auto;
 #content {
   display: flex;
   flex-direction: row;
-  margin: 25px; 
+  margin: 45px; 
   margin-top: 65px;
   gap: 90px;
   height: 100%;
@@ -59,14 +59,14 @@ h1 {
   font-size: 13px;
   font-weight: 600;
   padding: 0;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 h2 {
   font-size: 14px;
 }
 
-.firstAction {
+.firstAction, .secondAction, .plan {
   font-size: 13px;
 }
 
@@ -82,17 +82,26 @@ ul {
 .actions, .history {
   font-size: 14px;
   font-weight: 500;
-  padding-bottom: 15px;
+  padding-bottom: 25px;
 }
 
-.main-container {
+#container {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  width: 400px;
 }
 
-.when {
+#taskContainer {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.title-date {
   font-size: 17px;
-  padding-bottom: 46px;
+  padding-bottom: 22px;
 }
 
 .firstAction:hover, .secondAction:hover {
@@ -132,4 +141,26 @@ summary {
 
 .task {
 font-family: 'Fira Sans', sans-serif;
+}
+
+.taskButton {  
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid hsl(46, 4%, 16%);
+  padding: 7px 16px;
+  max-height: 36px;
+  max-width: 45px;
+  color: black;
+  background: #ffffff;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px;
+}
+
+.taskButton:hover {
+    background: #f6f6f7;
+    outline: 1px solid transparent;
 }
