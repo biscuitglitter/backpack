@@ -12,7 +12,7 @@ const Sidebar = () => {
     const day = document.createElement("div")
     day.classList.add("day")
     sidebarTop.appendChild(day)
-    day.innerText = "..."
+    day.innerText = "have a good thursday, yasmine"
 
     const actions = document.createElement("div")
     actions.classList.add("actions")

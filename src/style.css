@@ -44,6 +44,7 @@ hyphens: auto;
 .sidebar-container {
   display: flex;
   flex-direction: column;
+  max-width: 225px;
 }
 
 .sidebar-top {
@@ -71,6 +72,10 @@ li {
   list-style: inside;
 }
 
+.day {
+  font-size: 15px;
+}
+
 ul {
   margin-left: -40px; 
 }
@@ -84,6 +89,7 @@ ul {
 #container {
   display: flex;
   flex-direction: column;
+  padding-left: 25px;
   height: 100%;
   width: 400px;
 }
@@ -191,16 +197,15 @@ flex-direction: row;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   width: 350px;
-  min-height: 300px;
-  transition: transform 0.3s ease;
+  height: 300px;
   gap: 15px;
   text-align: center;
-  height: 40%;
-  background: blue;
+  background: white;
   border-radius: 5px;
+  transition: transform 0.3s ease;
 }
 
 #modal-container.show {
