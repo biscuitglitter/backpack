@@ -1,9 +1,9 @@
 const TaskButton = () => {
-    const container = document.getElementById("container")
+    const actions = document.getElementById("actions")
 
     const contain = document.createElement("div")
     contain.classList.add("buttonContainer")
-    container.appendChild(contain)
+    actions.appendChild(contain)
 
     const button = document.createElement("button")
     button.innerText = "Add task"

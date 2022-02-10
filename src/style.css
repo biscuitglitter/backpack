@@ -1,37 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap");
 
-*, *::before, *::after {
-box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 * {
-margin: 0;
+  margin: 0;
 }
 
-html, body {
-height: 100%;
-font-family: 'Rubik', sans-serif;
+html,
+body {
+  height: 100%;
+  font-family: "Rubik", sans-serif;
 }
 
 body {
-line-height: 1.5;
+  line-height: 1.5;
 }
 
-img, picture, video, canvas, svg {
-display: block;
-max-width: 100%;
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
 }
 
-input, button, textarea, select {
-font: inherit;
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-overflow-wrap: break-word;
-hyphens: auto;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 #content {
@@ -41,7 +57,7 @@ hyphens: auto;
   height: 850px;
 }
 
-.sidebar-container {
+.sidebar {
   display: flex;
   flex-direction: column;
   max-width: 300px;
@@ -60,23 +76,24 @@ h1 {
   font-size: 13px;
   font-weight: 600;
   padding: 0 8px;
-  padding-bottom: 10px;  
+  padding-bottom: 10px;
 }
 
 h2 {
   font-size: 14px;
 }
 
-.today, .projects {
+.today,
+.projects {
   font-size: 13px;
   padding: 10px 8px;
   border-radius: 4px;
 }
 
-.today:hover, .projects:hover {  
-  background: hsl(223, 7%, 98%)
+.today:hover,
+.projects:hover {
+  background: hsl(223, 7%, 98%);
 }
-
 
 li {
   font-size: 13px;
@@ -84,16 +101,16 @@ li {
 }
 
 .day {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 15px;
   font-weight: 550;
 }
 
 ul {
-  margin-left: -40px; 
+  margin-left: -40px;
 }
 
-.actions, .history {
+#actions {
   font-size: 14px;
   font-weight: 500;
   padding-bottom: 25px;
@@ -113,9 +130,8 @@ ul {
   padding-bottom: 22px;
 }
 
-
 details > summary {
- list-style-type: none;
+  list-style-type: none;
 }
 
 details {
@@ -142,7 +158,7 @@ summary {
 
 .input {
   padding-left: 8px;
-  padding-right: 8px;  
+  padding-right: 8px;
   padding-top: 2px;
 }
 
@@ -156,27 +172,32 @@ summary {
 }
 
 .task {
-  font-family: 'Fira Sans', sans-serif;
-  }
-  
-.buttonContainer {
-padding-top: 20px;
-display: flex;
-flex-direction: row;
+  font-family: "Fira Sans", sans-serif;
 }
 
-#taskButton {  
+.buttonContainer {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+#taskButton {
+  color: black;
+  background: #ffffff;
   display: inline-block;
   cursor: pointer;
   text-align: center;
   border: 1px solid hsl(46, 4%, 16%);
   padding: 7px 16px;
-  color: black;
-  background: #ffffff;
   border-radius: 4px;
   font-weight: 500;
   font-size: 14px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px;
+  width: 100px;
 }
 
 #modal-container {
@@ -200,9 +221,8 @@ flex-direction: row;
 
 #modal {
   display: flex;
+  padding: 10px 15px;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   width: 350px;
@@ -214,7 +234,26 @@ flex-direction: row;
   transition: transform 0.3s ease;
 }
 
+#close-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#close {
+  color: black;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px;
+  cursor: pointer;
+}
+
+#close:hover {
+  font-weight: 800;
+
+}
+
 #modal-container.show {
   opacity: 1;
   pointer-events: auto;
 }
+

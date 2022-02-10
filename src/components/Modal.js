@@ -9,11 +9,21 @@ const Modal = () => {
     modal.id = "modal"
     modal_container.appendChild(modal)
 
+    const close_container = document.createElement("div")
+    close_container.id = "close-container"
+    modal.appendChild(close_container)
+
+    const close_button = document.createElement("div")
+    close_button.id = "close"
+    close_container.appendChild(close_button)
+    close_button.innerText = "X"
+
     const modaltext = document.createElement("h1")
-    modaltext.innerText = "hi"
     modal.appendChild(modaltext)
-    
+   
     return modal_container 
+
+
 }
 
 export { Modal } 
