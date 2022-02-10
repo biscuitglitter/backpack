@@ -1,5 +1,5 @@
 const addTask = () => { 
-    const container = document.getElementById("taskContainer")
+    const container = document.getElementById("task-container")
     
     const task = document.createElement("div")
     task.classList.add("task")
@@ -9,7 +9,6 @@ const addTask = () => {
     task.appendChild(details)
 
     const summary = document.createElement("summary")
-    summary.innerText = "Get the milk"
     details.appendChild(summary)
 
     const input = document.createElement("div")

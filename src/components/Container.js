@@ -10,9 +10,9 @@ const Container = () => {
     titleDate.innerText = "Today"
     container.appendChild(titleDate)
 
-    const taskContainer = document.createElement("div")
-    taskContainer.id = "taskContainer"
-    container.appendChild(taskContainer)
+    const taskcontainer = document.createElement("div")
+    taskcontainer.id = "task-container"
+    container.appendChild(taskcontainer)
 
 
     return container
