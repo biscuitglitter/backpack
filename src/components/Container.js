@@ -7,7 +7,7 @@ const Container = () => {
 
     const titleDate = document.createElement("h2")
     titleDate.classList.add("title-date")
-    titleDate.innerText = "Today"
+    titleDate.innerText = "..."
     container.appendChild(titleDate)
 
     const taskcontainer = document.createElement("div")

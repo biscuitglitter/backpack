@@ -5,7 +5,6 @@ const TaskButton = () => {
     contain.classList.add("buttonContainer")
     container.appendChild(contain)
 
-
     const button = document.createElement("button")
     button.innerText = "+"
     button.classList.add("taskButton")
