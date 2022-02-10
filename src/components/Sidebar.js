@@ -6,7 +6,7 @@ const Sidebar = () => {
     sidebar.classList.add("sidebar-container")
 
     const sidebarTop = document.createElement("div")
-    sidebarTop.classList.add("sidebar-top")
+    sidebarTop.id = "greeting-message"
     sidebar.appendChild(sidebarTop)
 
     const day = document.createElement("div")

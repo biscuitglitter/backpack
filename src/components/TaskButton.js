@@ -6,7 +6,7 @@ const TaskButton = () => {
     container.appendChild(contain)
 
     const button = document.createElement("button")
-    button.innerText = "+"
+    button.innerText = "Add task"
     button.classList.add("taskButton")
     button.id = "taskButton"
     contain.appendChild(button)
