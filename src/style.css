@@ -66,13 +66,17 @@ h6 {
   padding: 10px 14px;
   border-radius: 4px;
   padding-top: 38px;
-  height: 600px;
+  height: 650px;
 }
 
 #sidebar_bottom {
   width: 400px;
   display: flex;
   justify-content: flex-end;
+}
+
+#greeting-message {
+  padding-bottom: 20px;
 }
 
 h1 {
