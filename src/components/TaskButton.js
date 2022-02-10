@@ -6,7 +6,7 @@ const TaskButton = () => {
     actions.appendChild(contain)
 
     const button = document.createElement("button")
-    button.innerText = "Add task"
+    button.innerText = "Add project"
     button.classList.add("taskButton")
     button.id = "taskButton"
     contain.appendChild(button)

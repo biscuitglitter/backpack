@@ -18,12 +18,12 @@ const Sidebar = () => {
     actions.appendChild(firstH1)
     
     const today = document.createElement("div")
-    today.classList.add("today")
+    today.id = "today"
     today.innerText = "Today"
     actions.appendChild(today)
 
     const projects = document.createElement("div")
-    projects.classList.add("projects")
+    projects.id = "projects"
     projects.innerText = "Projects"
     actions.appendChild(projects)
     

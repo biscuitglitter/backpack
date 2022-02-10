@@ -5,15 +5,14 @@ const Container = () => {
     container.id = "container"
     content.appendChild(container)
 
-    const titleDate = document.createElement("h2")
-    titleDate.classList.add("title-date")
-    titleDate.innerText = "Today"
-    container.appendChild(titleDate)
+    const current = document.createElement("h2")
+    current.classList.add("current")
+    current.innerText = "Today"
+    container.appendChild(current)
 
     const taskcontainer = document.createElement("div")
     taskcontainer.id = "task-container"
     container.appendChild(taskcontainer)
-
 
     return container
 }
