@@ -2,7 +2,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@500&display=swap');
 
 *,
 *::before,
@@ -60,16 +60,19 @@ h6 {
 .sidebar {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   max-width: 300px;
   background: hsl(224, 7%, 96%);
   padding: 10px 14px;
   border-radius: 4px;
   padding-top: 38px;
+  height: 600px;
 }
 
-#greeting-message {
-  font-size: 15px;
-  padding-bottom: 35px;
+#sidebar_bottom {
+  width: 400px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 h1 {
@@ -101,9 +104,10 @@ li {
 }
 
 .day {
-  font-family: "Raleway", sans-serif;
-  font-size: 15px;
+  font-family: 'Ibarra Real Nova', serif;
+  font-size: 14px;
   font-weight: 550;
+  font-style: italic;
 }
 
 ul {

@@ -5,18 +5,13 @@ const Sidebar = () => {
     content.appendChild(sidebar)
     sidebar.classList.add("sidebar")
 
-    const sidebarTop = document.createElement("div")
-    sidebarTop.id = "greeting-message"
-    sidebar.appendChild(sidebarTop)
-
-    const day = document.createElement("div")
-    day.classList.add("day")
-    sidebarTop.appendChild(day)
-    day.innerText = "have a good thursday, yasmine"
+    const sidebar_top = document.createElement("div")
+    sidebar_top.id = "sidebar-top"
+    sidebar.appendChild(sidebar_top)
 
     const actions = document.createElement("div")
     actions.id = "actions"
-    sidebar.appendChild(actions)
+    sidebar_top.appendChild(actions)
 
     const firstH1 = document.createElement("h1")
     firstH1.innerText = "ACTIONS"
@@ -31,12 +26,17 @@ const Sidebar = () => {
     projects.classList.add("projects")
     projects.innerText = "Projects"
     actions.appendChild(projects)
+    
+    const sidebar_bottom = document.createElement("div")
+    sidebar_bottom.id = "greeting-message"
+    sidebar.appendChild(sidebar_bottom)
 
-    const ul = document.createElement("ul")
-    sidebar.appendChild(ul)
+    const day = document.createElement("div")
+    day.classList.add("day")
+    sidebar_bottom.appendChild(day)
+    day.innerText = "Enjoy the rest of your Thursday!"
 
-
-    return sidebar, sidebarTop
+    return sidebar
 }
 
 export { Sidebar } 
