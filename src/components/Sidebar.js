@@ -9,25 +9,25 @@ const Sidebar = () => {
     sidebar_top.id = "sidebar-top"
     sidebar.appendChild(sidebar_top)
 
-    const sidebardiv = document.createElement("div")
-    sidebardiv.id = "sidebardiv"
-    sidebar_top.appendChild(sidebardiv)
+    const projects_container = document.createElement("div")
+    projects_container.id = "projects-container"
+    sidebar.appendChild(projects_container)
 
     const firstH1 = document.createElement("h1")
     firstH1.innerText = "ACTIONS"
-    sidebardiv.appendChild(firstH1)
+    sidebar_top.appendChild(firstH1)
     
-    const today = document.createElement("div")
-    today.id = "today"
-    sidebardiv.appendChild(today)
+    const home = document.createElement("div")
+    home.id = "home"
+    sidebar_top.appendChild(home)
 
     const textone = document.createElement("h2")
-    textone.innerText = "Today"
-    today.appendChild(textone)
+    textone.innerText = "Home"
+    home.appendChild(textone)
 
     const projects = document.createElement("div")
     projects.id = "projects"
-    sidebardiv.appendChild(projects)
+    sidebar_top.appendChild(projects)
 
     const texttwo = document.createElement("h2")
     texttwo.innerText = "Projects"

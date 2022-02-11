@@ -14,7 +14,7 @@ const Modal = () => {
     modal.appendChild(title_container)
 
     const title = document.createElement("div")
-    title.id = "project-title"
+    title.id = "addproject-title"
     title_container.appendChild(title)
     title.innerText = "New Project"
 

@@ -6,13 +6,9 @@ const Container = () => {
     content.appendChild(container)
 
     const current = document.createElement("h2")
-    current.classList.add("current")
+    current.id = ("current-tab")
     container.appendChild(current)
-
-    const taskcontainer = document.createElement("div")
-    taskcontainer.id = "task-container"
-    container.appendChild(taskcontainer)
-
+   
     return container
 }
 
