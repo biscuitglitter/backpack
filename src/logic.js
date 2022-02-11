@@ -1,6 +1,6 @@
 const addProject = () => {
   const modal = document.getElementById("modal-container");
-  const close = document.getElementById("close");
+  const close = document.getElementById("cancel");
   const button = document.getElementById("projectsbtn");
 
   button.addEventListener("click", () => {

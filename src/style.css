@@ -189,35 +189,54 @@ h2 {
 }
 
 #modal-footer {
-  height: 30px;
+  height: 55px;
   margin: 0;
   background: hsl(224, 7%, 96%);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 10px 12px;
 }
 
-#close-container {
+#buttons-container {
   display: flex;
-  justify-content: space-between;
-  padding: 10px 10px;
+  flex-direction: row;
+  gap: 20px;
+  padding: 8px;
+}
+
+#title-container {
+  display: flex;
+  justify-content: space-around;
 }
 
 #project-title {
   font-size: 15px;
+  padding: 10px 10px;
 }
 
-#close {
-  color: black;
+#cancel, #add { 
+  display: inline-block;
+  outline: 0;
+  font-size: 13px;
+  text-align: center;
   cursor: pointer;
-  font-size: 14px;
-  cursor: pointer;
-}
+  height: 28px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  transition: all .3s ease;
+  width: 55px;
+  padding-top: 2px;
+ }
 
-#close:hover {
-  font-weight: 800;
-
-}
+ #add {
+  background: hsl(356, 85%, 57%);
+  color: #fff
+ }
 
 #modal-container.show {
   opacity: 1;
   pointer-events: auto;
 }
+
 

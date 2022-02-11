@@ -9,19 +9,14 @@ const Modal = () => {
     modal.id = "modal"
     modal_container.appendChild(modal)
 
-    const close_container = document.createElement("div")
-    close_container.id = "close-container"
-    modal.appendChild(close_container)
+    const title_container = document.createElement("div")
+    title_container.id = "title-container"
+    modal.appendChild(title_container)
 
     const title = document.createElement("div")
     title.id = "project-title"
-    close_container.appendChild(title)
+    title_container.appendChild(title)
     title.innerText = "New Project"
-
-    const close_button = document.createElement("div")
-    close_button.id = "close"
-    close_container.appendChild(close_button)
-    close_button.innerText = "X"
 
     const modal_stuff = document.createElement("div")
     modal_stuff.id = "modal-stuff"
@@ -30,6 +25,20 @@ const Modal = () => {
     const modal_footer = document.createElement("div")
     modal_footer.id = "modal-footer"
     modal.appendChild(modal_footer)
+
+    const buttons = document.createElement("div")
+    buttons.id = "buttons-container"
+    modal_footer.appendChild(buttons)
+
+    const close_button = document.createElement("div")
+    close_button.id = "cancel"
+    buttons.appendChild(close_button)
+    close_button.innerText = "Cancel"
+
+    const add_button = document.createElement("div")
+    add_button.id = "add"
+    buttons.appendChild(add_button)
+    add_button.innerText = "Add"
    
     return modal_container 
 }
