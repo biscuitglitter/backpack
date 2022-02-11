@@ -1,14 +1,15 @@
-const addProject  = () => {
-    const modal = document.getElementById("modal-container")
-    const close = document.getElementById("close")
+const addProject = () => {
+  const modal = document.getElementById("modal-container");
+  const close = document.getElementById("close");
+  const button = document.getElementById("projectsbtn");
 
-     button.addEventListener("click", () => {
-         modal.classList.add("show")
-     });
+  button.addEventListener("click", () => {
+    modal.classList.add("show");
+  });
 
-     close.addEventListener("click", () => {
-         modal.classList.remove("show")
-     })
- }        
+  close.addEventListener("click", () => {
+    modal.classList.remove("show");
+  });
+};
 
-export { addProject }
+export { addProject };

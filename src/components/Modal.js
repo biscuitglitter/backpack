@@ -13,13 +13,23 @@ const Modal = () => {
     close_container.id = "close-container"
     modal.appendChild(close_container)
 
+    const title = document.createElement("div")
+    title.id = "project-title"
+    close_container.appendChild(title)
+    title.innerText = "New Project"
+
     const close_button = document.createElement("div")
     close_button.id = "close"
     close_container.appendChild(close_button)
     close_button.innerText = "X"
 
-    const modaltext = document.createElement("h1")
-    modal.appendChild(modaltext)
+    const modal_stuff = document.createElement("div")
+    modal_stuff.id = "modal-stuff"
+    modal.appendChild(modal_stuff)
+
+    const modal_footer = document.createElement("div")
+    modal_footer.id = "modal-footer"
+    modal.appendChild(modal_footer)
    
     return modal_container 
 }

@@ -1,4 +1,4 @@
-const addButtons = () => {
+const Buttons = () => {
     const projects = document.getElementById("projects")
 
     const btn_container = document.createElement("div")
@@ -13,4 +13,4 @@ const addButtons = () => {
     return btn_container
 }
 
-export { addButtons }
+export { Buttons }

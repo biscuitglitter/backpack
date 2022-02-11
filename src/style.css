@@ -74,7 +74,6 @@ h6 {
   max-width: 300px;
   background: hsl(224, 7%, 96%);
   padding: 10px 14px;
-  border-radius: 4px;
   padding-top: 38px;
   height: 650px;
 }
@@ -96,13 +95,6 @@ h1 {
   padding-bottom: 10px;
 }
 
-h2 {
-  font-size: 13px;
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 0;
-}
-
 #today,
 #projects {
   font-size: 13px;
@@ -118,6 +110,14 @@ h2 {
   background: hsl(223, 7%, 98%);
 }
 
+h2 {
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0;
+  padding-top: 2px;
+}
+
 #projectsbtn {
   border: none;
   background: none;
@@ -129,26 +129,11 @@ h2 {
   border-radius: 4px;
 }
 
-li {
-  font-size: 13px;
-  list-style: inside;
-}
-
 .day {
   font-family: 'Ibarra Real Nova', serif;
   font-size: 14px;
   font-weight: 550;
   font-style: italic;
-}
-
-ul {
-  margin-left: -40px;
-}
-
-#actions {
-  font-size: 14px;
-  font-weight: 500;
-  padding-bottom: 25px;
 }
 
 #container {
@@ -163,47 +148,6 @@ ul {
 .current {
   font-size: 17px;
   padding-bottom: 22px;
-}
-
-details > summary {
-  list-style-type: none;
-}
-
-details {
-  font-size: 15px;
-  color: hsl(0deg 0% 25%);
-  border-radius: 4px;
-}
-
-summary {
-  cursor: pointer;
-  padding: 12px;
-  outline-offset: 5px;
-  display: flex;
-  flex-direction: row;
-  font-weight: 700;
-}
-
-.more {
-  padding-bottom: 8px;
-  font-size: 13px;
-  font-style: italic;
-  padding-left: 25px;
-}
-
-.input {
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 2px;
-}
-
-#task-container {
-  min-height: 370px;
-  max-height: 370px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  overflow: hidden;
 }
 
 #modal-container {
@@ -227,8 +171,8 @@ summary {
 
 #modal {
   display: flex;
-  padding: 10px 15px;
   flex-direction: column;
+  justify-content: space-between;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   width: 350px;
@@ -240,9 +184,24 @@ summary {
   transition: transform 0.3s ease;
 }
 
+#modal-stuff {
+  height: 180px;
+}
+
+#modal-footer {
+  height: 30px;
+  margin: 0;
+  background: hsl(224, 7%, 96%);
+}
+
 #close-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+
+#project-title {
+  font-size: 15px;
 }
 
 #close {

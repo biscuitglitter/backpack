@@ -4,13 +4,13 @@ import { Sidebar } from "./components/Sidebar"
 import { Navbar } from "./components/Navbar"
 import { Container } from "./components/Container"
 import { Modal } from "./components/Modal"
-import { addButtons } from "./components/Buttons"
+import { Buttons } from "./components/Buttons"
 
 const initialPage = () => {
     Navbar()
     Content()
     Sidebar()
-    addButtons()
+    Buttons()
     Container()
     Modal()
 }
