@@ -97,7 +97,10 @@ h1 {
 }
 
 h2 {
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0;
 }
 
 #today,
@@ -105,11 +108,25 @@ h2 {
   font-size: 13px;
   padding: 10px 8px;
   border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
 }
 
 #today:hover,
 #projects:hover {
   background: hsl(223, 7%, 98%);
+}
+
+#projectsbtn {
+  border: none;
+  background: none;
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 4px;
 }
 
 li {
@@ -187,35 +204,6 @@ summary {
   flex-direction: column;
   gap: 5px;
   overflow: hidden;
-}
-
-.task {
-  font-family: "Fira Sans", sans-serif;
-}
-
-.buttonContainer {
-  padding-top: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-
-#taskButton {
-  color: black;
-  background: #ffffff;
-  display: inline-block;
-  cursor: pointer;
-  text-align: center;
-  border: 1px solid hsl(46, 4%, 16%);
-  padding: 7px 16px;
-  border-radius: 4px;
-  font-weight: 500;
-  font-size: 13px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px;
-  width: 110px;
 }
 
 #modal-container {

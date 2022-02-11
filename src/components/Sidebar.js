@@ -19,13 +19,19 @@ const Sidebar = () => {
     
     const today = document.createElement("div")
     today.id = "today"
-    today.innerText = "Today"
     sidebardiv.appendChild(today)
+
+    const textone = document.createElement("h2")
+    textone.innerText = "Today"
+    today.appendChild(textone)
 
     const projects = document.createElement("div")
     projects.id = "projects"
-    projects.innerText = "Projects"
     sidebardiv.appendChild(projects)
+
+    const texttwo = document.createElement("h2")
+    texttwo.innerText = "Projects"
+    projects.appendChild(texttwo)
     
     const sidebar_bottom = document.createElement("div")
     sidebar_bottom.id = "greeting-message"

@@ -22,8 +22,6 @@ const Modal = () => {
     modal.appendChild(modaltext)
    
     return modal_container 
-
-
 }
 
 export { Modal } 

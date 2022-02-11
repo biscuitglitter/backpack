@@ -1,4 +1,3 @@
-
 const Content = () => {
     const content_container = document.createElement("div")
     document.body.appendChild(content_container)

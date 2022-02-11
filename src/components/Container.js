@@ -7,7 +7,6 @@ const Container = () => {
 
     const current = document.createElement("h2")
     current.classList.add("current")
-    current.innerText = "Today"
     container.appendChild(current)
 
     const taskcontainer = document.createElement("div")
