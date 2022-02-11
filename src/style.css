@@ -50,11 +50,21 @@ h6 {
   hyphens: auto;
 }
 
+#content-container {
+  display: flex;
+  flex-direction: column;
+  height: 850px;
+}
+
 #content {
   display: flex;
   flex-direction: row;
-  gap: 90px;
-  height: 850px;
+}
+
+#navbar-container {
+  height: 60px;
+  width: 100%;
+  background: hsl(356, 85%, 57%);
 }
 
 .sidebar {
@@ -128,7 +138,7 @@ ul {
   display: flex;
   flex-direction: column;
   padding-top: 38px;
-  padding-left: 25px;
+  padding-left: 80px;
   height: 100%;
   width: 400px;
 }

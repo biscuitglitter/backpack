@@ -1,9 +1,9 @@
 const TaskButton = () => {
-    const actions = document.getElementById("actions")
+    const sidebardiv = document.getElementById("sidebardiv")
 
     const contain = document.createElement("div")
     contain.classList.add("buttonContainer")
-    actions.appendChild(contain)
+    sidebardiv.appendChild(contain)
 
     const button = document.createElement("button")
     button.innerText = "Add project"
