@@ -137,7 +137,7 @@ h2 {
   border-radius: 4px;
 }
 
-#modal-container {
+#modal-container-one {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -156,7 +156,12 @@ h2 {
   z-index: 1;
 }
 
-#modal {
+#modal-container-one.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#modal-one {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -200,7 +205,7 @@ input:focus::placeholder {
   outline: none;
 }
 
-#modal-footer {
+#modal-footer-one {
   height: 55px;
   margin: 0;
   background: hsl(224, 7%, 96%);
@@ -210,24 +215,95 @@ input:focus::placeholder {
   padding: 10px 12px;
 }
 
-#buttons-container {
+#modal-container-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-align: center;
+  height: 50%;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#modal-container-two.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#modal-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  height: 300px;
+  gap: 15px;
+  text-align: center;
+  background: white;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  font-size: 14px;
+}
+
+#modal-questions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 200px;
+  margin: 5px 5px;
+  margin-top: 22px;
+}
+
+#todo-title, #todo-description, #priority-container {
+  background: hsl(210, 9%, 96%);
+  height: 55px;
+  border: none;
+  border-radius: 6px;
+  width: 85%;
+  text-align: center;
+}
+
+#todo-title:focus, #todo-description:focus, #priority-container:focus {
+  border: none;
+  outline: none;
+}
+
+#priority-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+#modal-footer-two {
+  height: 55px;
+  margin: 0;
+  background: hsl(224, 7%, 96%);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 10px 12px;
+}
+
+#buttons-project, #buttons-questions {
   display: flex;
   flex-direction: row;
   gap: 20px;
   padding: 8px;
 }
 
-#title-container {
-  display: flex;
-  justify-content: flex-start;
-}
-
-#addproject-title {
-  font-size: 14px;
-  padding: 10px 14px;
-}
-
-#cancel, #add { 
+#cancel, #add, #agree, #close { 
   display: inline-block;
   outline: 0;
   font-size: 13px;
@@ -241,16 +317,10 @@ input:focus::placeholder {
   padding-top: 3px;
  }
 
- #add {
+ #add, #agree {
   background: hsl(356, 85%, 57%);
   color: #fff
  }
-
-#modal-container.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
 
 #container {
   display: flex;
@@ -285,4 +355,40 @@ input:focus::placeholder {
 
 li {
   cursor: pointer;
+}
+
+
+#priority-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  text-align: center;
+}
+
+#priority-content.show {
+    display: flex;
+    flex-direction: column;
+}
+
+#dropdown {
+  font-size: 12px;
+  height: 25px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  padding: 10px;
+}
+
+a:hover {
+  background: hsl(223, 7%, 98%);
 }

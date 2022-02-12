@@ -1,15 +1,36 @@
 const openModal = () => {
-  const modal = document.getElementById("modal-container");
-  const close = document.getElementById("cancel");
+  const modal_one = document.getElementById("modal-container-one");
+  const modal_two = document.getElementById("modal-container-two");
+
+  const close = document.getElementById("close");
+  const cancel = document.getElementById("cancel")
   const button = document.getElementById("projectsbtn");
+  const add = document.getElementById("add");
+
+  const dropdown = document.getElementById("dropdown")
+  const priority_content = document.getElementById("priority-content")
 
   button.addEventListener("click", () => {
-    modal.classList.add("show");
+    modal_one.classList.add("show");
   });
 
   close.addEventListener("click", () => {
-    modal.classList.remove("show");
+    modal_one.classList.remove("show");
   });
+
+  add.addEventListener("click", () => {
+    modal_two.classList.add("show");
+  });
+
+  cancel.addEventListener("click", () => {
+    modal_two.classList.remove("show");
+    modal_one.classList.remove("show");
+  });
+
+  dropdown.addEventListener("click", () => {
+    priority_content.classList.add("show");
+  });
+
 
 };
 
