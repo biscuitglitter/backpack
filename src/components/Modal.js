@@ -9,18 +9,23 @@ const Modal = () => {
     modal.id = "modal"
     modal_container.appendChild(modal)
 
-    const title_container = document.createElement("div")
-    title_container.id = "title-container"
-    modal.appendChild(title_container)
+    // const title_container = document.createElement("div")
+    // title_container.id = "title-container"
+    // modal.appendChild(title_container)
 
-    const title = document.createElement("div")
-    title.id = "addproject-title"
-    title_container.appendChild(title)
-    title.innerText = "New Project"
+    // const title = document.createElement("div")
+    // title.id = "addproject-title"
+    // title_container.appendChild(title)
+    // title.innerText = ""
 
     const modal_stuff = document.createElement("div")
     modal_stuff.id = "modal-stuff"
     modal.appendChild(modal_stuff)
+
+    const projectName = document.createElement("input")
+    projectName.id = "project-name"
+    projectName.placeholder = "What are you working on?"
+    modal_stuff.appendChild(projectName)
 
     const modal_footer = document.createElement("div")
     modal_footer.id = "modal-footer"

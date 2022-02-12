@@ -70,7 +70,6 @@ h6 {
 .sidebar {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   min-width: 225px;
   max-width: 225px;
   background: hsl(224, 7%, 96%);
@@ -174,6 +173,31 @@ h2 {
 
 #modal-stuff {
   height: 180px;
+  display: flex;
+  justify-content: center;
+}
+
+#project-name {
+  background: hsl(210, 9%, 96%);
+  height: 60px;
+  border: none;
+  border-radius: 6px;
+  width: 85%;
+  text-align: center;
+  margin-top: 40px;
+}
+
+input::placeholder {
+  color: hsl(55, 0%, 44%, 0.8)
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+#project-name:focus {
+  border: none;
+  outline: none;
 }
 
 #modal-footer {
@@ -214,7 +238,7 @@ h2 {
   border: 1px solid transparent;
   transition: all .3s ease;
   width: 55px;
-  padding-top: 2px;
+  padding-top: 3px;
  }
 
  #add {
@@ -244,4 +268,21 @@ h2 {
 
 #projects-container {
   min-height: 200px;
+  height: 400px;
+}
+
+.task {
+  font-size: 13px;
+  list-style: none;
+  padding-left: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.task:hover {
+  background: hsl(223, 7%, 98%);
+}
+
+li {
+  cursor: pointer;
 }
