@@ -32,10 +32,6 @@ const addTodo = (task) => {
   const todo_container = document.createElement("div")
   todo_container.id = "todo-container"
   pcontainer.appendChild(todo_container)
-
-  
-  
-
 }
 
 const displayProject = () => {

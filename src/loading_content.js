@@ -6,7 +6,7 @@ import { Container } from "./components/Container"
 import { Modal } from "./components/Modal"
 import { Buttons } from "./components/Buttons"
 
-const initialPage = () => {
+const LoadingContent = () => {
     Navbar()
     Content()
     Sidebar()
@@ -15,4 +15,4 @@ const initialPage = () => {
     Modal()
 }
 
-export { initialPage }
+export { LoadingContent }

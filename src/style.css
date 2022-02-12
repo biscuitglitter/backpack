@@ -71,10 +71,10 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 195px;
-  max-width: 195px;
+  min-width: 225px;
+  max-width: 225px;
   background: hsl(224, 7%, 96%);
-  padding: 10px 14px;
+  padding: 8px 12px;
   padding-top: 38px;
   height: 650px;
 }

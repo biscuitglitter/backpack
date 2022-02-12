@@ -1,6 +1,6 @@
-import { initialPage } from "./initial"
-import { addProject } from "./logic"
+import { LoadingContent } from "./loading_content"
+import { DayofWeek } from "./get_day"
 
-initialPage()
-addProject()
+LoadingContent()
+DayofWeek()
 
