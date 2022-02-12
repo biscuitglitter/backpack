@@ -6,6 +6,7 @@ const openModal = () => {
   const cancel = document.getElementById("cancel")
   const button = document.getElementById("projectsbtn");
   const add = document.getElementById("add");
+  const agree = document.getElementById("agree");
 
   const dropdown = document.getElementById("dropdown")
   const priority_content = document.getElementById("priority-content")
@@ -22,6 +23,11 @@ const openModal = () => {
 
   add.addEventListener("click", () => {
     modal_one.classList.remove("show")
+  });
+
+  
+  agree.addEventListener("click", () => {
+    modal_two.classList.remove("show")
   });
 
   cta.addEventListener("click", () => {
@@ -66,6 +72,10 @@ const makeProject = () => {
     li.innerText = projectName.value
   });}
 
+const Clear = () => {
+  document.getElementById("todo-title").innerText = "";
+  document.getElementById("todo-description").innerText = "";
+  document.getElementById("project-name").innerText = "";
+}
 
-
-export { openModal, makeProject, Priority };
+export { openModal, makeProject, Priority, Clear};

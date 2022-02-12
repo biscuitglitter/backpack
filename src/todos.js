@@ -12,7 +12,16 @@ const addTodo = () => {
 
   const container = document.getElementById("container")
 
+  const wrapper = document.createElement("div")
+  wrapper.id = "wrapper"
+
+  const checkbox = document.createElement("input")
+  checkbox.type = "checkbox"
+  checkbox.classList.add("checkbox")
+  wrapper.appendChild(checkbox)
+
   const details = document.createElement("details")
+  details.classList.add("details")
   
   const summary = document.createElement("summary")
   
@@ -22,7 +31,8 @@ const addTodo = () => {
   summary.innerText = `${task.title}`
   description.innerText = `${task.description}`
 
-  container.appendChild(details)
+  container.appendChild(wrapper)
+  wrapper.appendChild(details)
   details.appendChild(summary)
   details.appendChild(description)
 }
