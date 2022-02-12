@@ -10,7 +10,7 @@ const Modal = () => {
     const modal_one = document.createElement("div")
     modal_one.id = "modal-one"
     modal_container_one.appendChild(modal_one)
-
+    
     const modal_stuff = document.createElement("div")
     modal_stuff.id = "modal-stuff"
     modal_one.appendChild(modal_stuff)
@@ -47,7 +47,7 @@ const Modal = () => {
     const modal_two = document.createElement("div")
     modal_two.id = "modal-two"
     modal_container_two.appendChild(modal_two)
-    
+
     const modal_questions = document.createElement("div")
     modal_questions.id = "modal-questions"
     modal_two.appendChild(modal_questions)
@@ -107,7 +107,7 @@ const Modal = () => {
     const agree_button = document.createElement("div")
     agree_button.id = "agree"
     buttons_questions.appendChild(agree_button)
-    agree_button.innerText = "Add"
+    agree_button.innerText = "Add to-do"
    
     return modal_container_one, modal_container_two
 }

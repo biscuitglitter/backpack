@@ -10,6 +10,8 @@ const openModal = () => {
   const dropdown = document.getElementById("dropdown")
   const priority_content = document.getElementById("priority-content")
 
+  const cta = document.getElementById("cta")
+
   button.addEventListener("click", () => {
     modal_one.classList.add("show");
   });
@@ -19,7 +21,12 @@ const openModal = () => {
   });
 
   add.addEventListener("click", () => {
-    modal_two.classList.add("show");
+    modal_one.classList.remove("show")
+  });
+
+  cta.addEventListener("click", () => {
+    modal_one.classList.remove("show")
+    modal_two.classList.add("show")
   });
 
   cancel.addEventListener("click", () => {
@@ -30,9 +37,20 @@ const openModal = () => {
   dropdown.addEventListener("click", () => {
     priority_content.classList.add("show");
   });
-
-
 };
+
+const Priority = () => {
+  const priorities = document.querySelectorAll("a")
+  const todo_priority = document.getElementById("todo-priority")
+
+  priorities.forEach(priority => {
+    priority.addEventListener("click", () => {
+      let choice = priority.innerText
+      todo_priority.innerText = choice
+      document.getElementById("priority-content").classList.add("hide")
+    })
+  })
+}
 
 const makeProject = () => {
   const add = document.getElementById("add");
@@ -46,35 +64,8 @@ const makeProject = () => {
     div.append(li)
     projectsContainer.appendChild(div)
     li.innerText = projectName.value
-  });
-}
+  });}
 
 
-let Todo = class {
-  constructor(title, description, priority) {
-    this.title = title;
-    this.description = description;
-    this.priority = priority
-  }
-}
 
-const makeTodo = () => {
-  todo = new Todo();
-  todo.title = document.querySelector(".titleInput").value; 
-  todo.description = document.querySelector(".descriptionInput").value;
-  todo.priority = document.querySelector(".priorityInput").value;
-};
-
-const addTodo = (task) => {
-  const pcontainer = document.getElementById("projects-container")
-  const todo_container = document.createElement("div")
-  todo_container.id = "todo-container"
-  pcontainer.appendChild(todo_container)
-}
-
-const displayProject = () => {
-  let array = []
-}
-
-
-export { openModal, makeProject };
+export { openModal, makeProject, Priority };

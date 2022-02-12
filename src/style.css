@@ -126,7 +126,7 @@ h2 {
   cursor: pointer;
 }
 
-#projectsbtn {
+#projectsbtn, #cta {
   border: none;
   background: none;
   color: hsl(356, 85%, 57%);
@@ -137,7 +137,14 @@ h2 {
   border-radius: 4px;
 }
 
+#cta {
+  font-size: 16px;
+  width: 20%;
+  height: 30px;
+}
+
 #modal-container-one {
+  font-size: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -177,9 +184,11 @@ h2 {
 }
 
 #modal-stuff {
-  height: 180px;
+  min-height: 200px;
   display: flex;
   justify-content: center;
+  margin: 5px 5px;
+  margin: 22px;
 }
 
 #project-name {
@@ -216,6 +225,7 @@ input:focus::placeholder {
 }
 
 #modal-container-two {
+  font-size: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -242,7 +252,7 @@ input:focus::placeholder {
 #modal-two {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   width: 350px;
@@ -252,7 +262,6 @@ input:focus::placeholder {
   background: white;
   border-radius: 5px;
   transition: transform 0.3s ease;
-  font-size: 14px;
 }
 
 #modal-questions {
@@ -282,6 +291,7 @@ input:focus::placeholder {
 #priority-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
 }
@@ -313,7 +323,7 @@ input:focus::placeholder {
   border-radius: 3px;
   border: 1px solid transparent;
   transition: all .3s ease;
-  width: 55px;
+  width: 75px;
   padding-top: 3px;
  }
 
@@ -357,7 +367,6 @@ li {
   cursor: pointer;
 }
 
-
 #priority-content {
   display: none;
   position: absolute;
@@ -377,6 +386,11 @@ li {
     flex-direction: column;
 }
 
+#priority-content.hide {
+  display: none;
+pointer-events: none
+;}
+
 #dropdown {
   font-size: 12px;
   height: 25px;
@@ -391,4 +405,6 @@ a {
 
 a:hover {
   background: hsl(223, 7%, 98%);
+  cursor: pointer;
 }
+

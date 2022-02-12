@@ -8,7 +8,16 @@ const Container = () => {
     const current = document.createElement("h2")
     current.id = ("current-tab")
     container.appendChild(current)
-   
+
+    const addtask = document.createElement("div")
+    addtask.id = "todo-cta"
+    container.appendChild(addtask)
+    
+    const taskbutton = document.createElement("button")
+    taskbutton.id = "cta"
+    taskbutton.innerText = "+   " + "Add to-do"
+    container.appendChild(taskbutton)
+
     return container
 }
 
