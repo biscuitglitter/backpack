@@ -9,11 +9,6 @@ const Container = () => {
     current.id = ("current-tab")
     container.appendChild(current)
     
-    const taskbutton = document.createElement("button")
-    taskbutton.id = "cta"
-    taskbutton.innerText = "+   " + "Add to-do"
-    container.appendChild(taskbutton)
-
     return container
 }
 

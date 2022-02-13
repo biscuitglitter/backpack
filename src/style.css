@@ -4,6 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@500&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300&display=swap');
+
 *,
 *::before,
 *::after {
@@ -65,6 +67,10 @@ h6 {
   height: 55px;
   width: 100%;
   background: hsl(356, 85%, 57%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .sidebar {
@@ -126,7 +132,7 @@ h2 {
   cursor: pointer;
 }
 
-#projectsbtn, #cta {
+#projectsbtn, #addtodo-button {
   border: none;
   background: none;
   color: hsl(356, 85%, 57%);
@@ -137,11 +143,25 @@ h2 {
   border-radius: 4px;
 }
 
-#cta {
-  font-size: 16px;
-  width: 100px;
+#addtodo-button {
+  color: #fff;
+}
+#navbar-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  max-width: 300px;
+  gap: 10px;
+}
+
+#addtodo-button{
+  font-size: 22px;
   height: 30px;
 }
+
+/* modal one */
 
 #modal-container-one {
   font-size: 14px;
@@ -149,7 +169,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
   text-align: center;
   height: 50%;
   position: fixed;
@@ -175,8 +195,8 @@ h2 {
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   width: 350px;
-  height: 300px;
-  gap: 15px;
+  height: 250px;
+  gap: 10px;
   text-align: center;
   background: white;
   border-radius: 5px;
@@ -184,11 +204,9 @@ h2 {
 }
 
 #modal-stuff {
-  min-height: 200px;
-  display: flex;
-  justify-content: center;
+  max-height: 200px;
   margin: 5px 5px;
-  margin: 22px;
+  margin-top: 22px;
 }
 
 #project-name {
@@ -201,11 +219,11 @@ h2 {
   margin-top: 40px;
 }
 
-input::placeholder {
+input#project-name::placeholder, input#todo-title::placeholder, input#todo-description::placeholder {
   color: hsl(55, 0%, 44%, 0.8)
 }
 
-input:focus::placeholder {
+input#project-name:focus::placeholder, input#todo-title:focus::placeholder, input#todo-description:focus::placeholder {
   color: transparent;
 }
 
@@ -215,14 +233,17 @@ input:focus::placeholder {
 }
 
 #modal-footer-one {
-  height: 55px;
+  height: auto;
   margin: 0;
   background: hsl(224, 7%, 96%);
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   padding: 10px 12px;
+
 }
+
+/* end of modal one */
 
 #modal-container-two {
   font-size: 14px;
@@ -386,11 +407,6 @@ li {
     flex-direction: column;
 }
 
-#priority-content.hide {
-  display: none;
-pointer-events: none
-;}
-
 #dropdown {
   font-size: 12px;
   height: 25px;
@@ -408,28 +424,20 @@ a:hover {
   cursor: pointer;
 }
 
-#wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  width: 70%;
-  height: 45px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  padding: 6px 8px;
-  font-size: 14px;
-  gap: 12px;
-}
-
-#wrapper:hover {
-  background: hsl(224, 7%, 96%)
-}
-
-details > summary {
-  list-style: none;
-  }
-
 .checkbox:hover {
   cursor: pointer;
+}
+
+#search {
+  background: #de1220;
+  border-radius: 4px;
+  width: 220px;
+  height: 40px;
+  font-size: 13px;
+  color: rgba(255, 246, 246, 0.842);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
 }

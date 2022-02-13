@@ -8,7 +8,6 @@
   
 const addTodo = () => {
   let task = new Todo(document.getElementById("todo-title").value, document.getElementById("todo-description").value, document.getElementById("todo-priority").innerText);
-  console.log(task)
 
   const container = document.getElementById("container")
 
@@ -19,22 +18,16 @@ const addTodo = () => {
   checkbox.type = "checkbox"
   checkbox.classList.add("checkbox")
   wrapper.appendChild(checkbox)
-
-  const details = document.createElement("details")
-  details.classList.add("details")
   
-  const summary = document.createElement("summary")
+  const todo = document.createElement("p")
   
-  summary.className = "summary-title"
-  const description = document.createElement("p")
+  todo.className = "todo-title"
   
-  summary.innerText = `${task.title}`
-  description.innerText = `${task.description}`
+  todo.innerText = `${task.title}`
 
   container.appendChild(wrapper)
-  wrapper.appendChild(details)
-  details.appendChild(summary)
-  details.appendChild(description)
+  wrapper.appendChild(checkbox)
+  wrapper.appendChild(todo)
 }
   
  export { addTodo };

@@ -11,7 +11,7 @@ const openModal = () => {
   const dropdown = document.getElementById("dropdown")
   const priority_content = document.getElementById("priority-content")
 
-  const cta = document.getElementById("cta")
+  const addtodo_button = document.getElementById("addtodo-button")
 
   button.addEventListener("click", () => {
     modal_one.classList.add("show");
@@ -24,13 +24,12 @@ const openModal = () => {
   add.addEventListener("click", () => {
     modal_one.classList.remove("show")
   });
-
   
   agree.addEventListener("click", () => {
     modal_two.classList.remove("show")
   });
 
-  cta.addEventListener("click", () => {
+  addtodo_button.addEventListener("click", () => {
     modal_one.classList.remove("show")
     modal_two.classList.add("show")
   });
@@ -41,19 +40,22 @@ const openModal = () => {
   });
 
   dropdown.addEventListener("click", () => {
-    priority_content.classList.add("show");
+    priority_content.classList.add("show")    
+
   });
+
 };
 
 const Priority = () => {
   const priorities = document.querySelectorAll("a")
   const todo_priority = document.getElementById("todo-priority")
+  const priority_content = document.getElementById("priority-content")
 
   priorities.forEach(priority => {
     priority.addEventListener("click", () => {
       let choice = priority.innerText
       todo_priority.innerText = choice
-      document.getElementById("priority-content").classList.add("hide")
+      priority_content.classList.remove("show")
     })
   })
 }
@@ -78,4 +80,4 @@ const Clear = () => {
   document.getElementById("project-name").innerText = "";
 }
 
-export { openModal, makeProject, Priority, Clear};
+export { openModal, makeProject, Priority, Clear };
