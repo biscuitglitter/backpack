@@ -69,6 +69,7 @@ const makeProject = () => {
     const div = document.createElement("div")
     div.className = "task"
     const li = document.createElement("li")
+    li.classList.add = "li"
     div.append(li)
     projectsContainer.appendChild(div)
     li.innerText = projectName.value
