@@ -15,8 +15,7 @@
   margin: 0;
 }
 
-html,
-body {
+html, body {
   height: 100%;
   font-family: "Rubik", sans-serif;
 }
@@ -25,43 +24,21 @@ body {
   line-height: 1.5;
 }
 
-img,
-picture,
-video,
-canvas,
-svg {
+img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
 
-input,
-button,
-textarea,
-select {
+input, button, textarea, select {
   font: inherit;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
   hyphens: auto;
 }
 
-#content-container {
-  display: flex;
-  flex-direction: column;
-  height: 850px;
-}
-
-#content {
-  display: flex;
-  flex-direction: row;
-}
+/* navbar */
 
 #navbar-container {
   height: 55px;
@@ -72,6 +49,50 @@ h6 {
   justify-content: center;
   align-items: center;
 }
+
+
+#navbar-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  max-width: 300px;
+  gap: 10px;
+}
+
+#addtodo-button {
+  font-size: 22px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: none;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  background: none;
+}
+
+
+
+#search {
+  background: #de1220;
+  border-radius: 4px;
+  width: 220px;
+  height: 40px;
+  font-size: 13px;
+  color: rgba(255, 246, 246, 0.842);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+/* sidebar */
 
 .sidebar {
   display: flex;
@@ -108,8 +129,7 @@ h1 {
   padding-bottom: 10px;
 }
 
-#home,
-#projects {
+#home, #projects {
   font-size: 13px;
   padding: 10px 8px;
   border-radius: 4px;
@@ -118,8 +138,7 @@ h1 {
   text-align: center;
 }
 
-#home:hover,
-#projects:hover {
+#home:hover, #projects:hover {
   background: hsl(223, 7%, 98%);
 }
 
@@ -132,7 +151,7 @@ h2 {
   cursor: pointer;
 }
 
-#projectsbtn, #addtodo-button {
+#projectsbtn {
   border: none;
   background: none;
   color: hsl(356, 85%, 57%);
@@ -143,22 +162,13 @@ h2 {
   border-radius: 4px;
 }
 
-#addtodo-button {
-  color: #fff;
-}
-#navbar-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  min-width: 200px;
-  max-width: 300px;
-  gap: 10px;
+#projects-container {
+  min-height: 200px;
+  height: 400px;
 }
 
-#addtodo-button{
-  font-size: 22px;
-  height: 30px;
+li {
+  cursor: pointer;
 }
 
 /* modal one */
@@ -238,12 +248,12 @@ input#project-name:focus::placeholder, input#todo-title:focus::placeholder, inpu
   background: hsl(224, 7%, 96%);
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: flex-end;
   padding: 10px 12px;
-
 }
 
-/* end of modal one */
+/* modal two */
 
 #modal-container-two {
   font-size: 14px;
@@ -297,7 +307,7 @@ input#project-name:focus::placeholder, input#todo-title:focus::placeholder, inpu
 
 #todo-title, #todo-description, #priority-container {
   background: hsl(210, 9%, 96%);
-  height: 55px;
+  height: 70px;
   border: none;
   border-radius: 6px;
   width: 85%;
@@ -323,6 +333,7 @@ input#project-name:focus::placeholder, input#todo-title:focus::placeholder, inpu
   background: hsl(224, 7%, 96%);
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: flex-end;
   padding: 10px 12px;
 }
@@ -330,7 +341,7 @@ input#project-name:focus::placeholder, input#todo-title:focus::placeholder, inpu
 #buttons-project, #buttons-questions {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 15px;
   padding: 8px;
 }
 
@@ -353,41 +364,7 @@ input#project-name:focus::placeholder, input#todo-title:focus::placeholder, inpu
   color: #fff
  }
 
-#container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 38px;
-  margin-left: 80px;
-  height: 100%;
-  width: 800px;
-}
-
-#current-tab {
-  font-size: 17px;
-  padding-bottom: 22px;
-}
-
-#projects-container {
-  min-height: 200px;
-  height: 400px;
-}
-
-.task {
-  font-size: 13px;
-  list-style: none;
-  padding-left: 15px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.task:hover {
-  background: hsl(223, 7%, 98%);
-}
-
-li {
-  cursor: pointer;
-}
-
+ 
 #priority-content {
   display: none;
   position: absolute;
@@ -424,20 +401,55 @@ a:hover {
   cursor: pointer;
 }
 
-.checkbox:hover {
+ /* end of modal two */
+
+ /* content  */
+
+ #content-container {
+  display: flex;
+  flex-direction: column;
+  height: 850px;
+}
+
+#content {
+  display: flex;
+  flex-direction: row;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 38px;
+  margin-left: 80px;
+  height: 100%;
+  width: 800px;
+}
+
+#current-tab {
+  font-size: 17px;
+  padding-bottom: 22px;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 500px;
+  min-height: 40px;
+  max-height: 40px; 
+  text-align: center;
+  gap: 20px;
+}
+
+.todo-title {
+  width: fit-content;
+  height: fit-content;
+}
+
+.checkbox {
   cursor: pointer;
 }
 
-#search {
-  background: #de1220;
-  border-radius: 4px;
-  width: 220px;
-  height: 40px;
-  font-size: 13px;
-  color: rgba(255, 246, 246, 0.842);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  pointer-events: none;
-}
+
+

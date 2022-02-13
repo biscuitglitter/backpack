@@ -72,12 +72,14 @@ const makeProject = () => {
     div.append(li)
     projectsContainer.appendChild(div)
     li.innerText = projectName.value
-  });}
+  });
+}
 
 const Clear = () => {
-  document.getElementById("todo-title").innerText = "";
-  document.getElementById("todo-description").innerText = "";
-  document.getElementById("project-name").innerText = "";
+  document.getElementById("todo-title").value = "";
+  document.getElementById("project-name").value = "";
 }
+
+
 
 export { openModal, makeProject, Priority, Clear };

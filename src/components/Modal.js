@@ -57,11 +57,6 @@ const Modal = () => {
     title.placeholder = "What do you want to name it?"
     modal_questions.appendChild(title)
 
-    const description = document.createElement("input")
-    description.id = "todo-description"
-    description.placeholder = "How would you describe it?"
-    modal_questions.appendChild(description)
-
     const priority = document.createElement("div")
     priority.id = "priority-container"
     modal_questions.appendChild(priority)

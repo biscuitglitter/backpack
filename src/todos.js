@@ -1,13 +1,12 @@
  let Todo = class {
-     constructor(title, description, priority) {
+     constructor(title, priority) {
        this.title = title;
-       this.description = description;
        this.priority = priority
    }
  }
   
 const addTodo = () => {
-  let task = new Todo(document.getElementById("todo-title").value, document.getElementById("todo-description").value, document.getElementById("todo-priority").innerText);
+  let task = new Todo(document.getElementById("todo-title").value, document.getElementById("todo-priority").innerText);
 
   const container = document.getElementById("container")
 
