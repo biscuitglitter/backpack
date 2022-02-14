@@ -29,5 +29,5 @@ const addTodo = () => {
   wrapper.appendChild(todo)
 }
   
- export { addTodo };
-
+export { addTodo };
+  

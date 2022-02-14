@@ -1,8 +1,7 @@
-import { loading_page } from "./loading_content"
-import { DayofWeek } from "./get_day"
-import { openModal, makeProject, Priority, Clear } from "./logic"
-import { addTodo } from "./todos"
-import { Tabbing } from "./tabbing"
+import { loading_page } from "./loading_page"
+import { DayofWeek } from "./components/get_day"
+import { openModal, Priority, Clear } from "./js_logic/modal"
+import { makeProject } from "./js_logic/make_project"
 
 loading_page()
 DayofWeek()
@@ -10,18 +9,4 @@ openModal()
 makeProject()
 Priority()
 
-const agree = document.getElementById("agree")
-agree.addEventListener("click", () => {
-    addTodo()
-    Clear()
-}
-)
-
-const modal_one = document.getElementById("modal-container-one");
-const add = document.getElementById("add")
-add.addEventListener("click", () => {
-    modal_one.classList.remove("show")
-    Clear()
-    Tabbing()
-  });
 

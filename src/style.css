@@ -111,7 +111,7 @@ p, h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: flex-end;
 }
-.task {
+.project {
   font-size: 13px;
   list-style: none;
   padding-left: 15px;
@@ -120,7 +120,7 @@ p, h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-.task:hover {
+.project:hover {
   background: hsl(223, 7%, 98%);
   cursor: pointer;
 }
@@ -180,7 +180,7 @@ h2 {
 
 #projects-container {
   min-height: 200px;
-  height: 400px;
+  height: 300px;
 }
 
 /* modal one */
