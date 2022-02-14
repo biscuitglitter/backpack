@@ -13,14 +13,13 @@ const makeProject = () => {
     li.innerText = projectName.value;
 
     arr_project.push(div);
-    for (let i = 0; i < arr_project.length; i++) {
-      div.id = "target"+i; 
-    }      
-  });
+    // for (let i = 0; i < arr_project.length; i++) {
+    //   div.id = "target"+i; 
+    // }      
+  });  
 };
 
 export { makeProject };
-
 
 
 

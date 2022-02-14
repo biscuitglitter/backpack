@@ -1,6 +1,4 @@
-import { Tabbing } from "./tabbing"
 import { addTodo } from "./make_todos"
-
 
 const Clear = () => {
   document.getElementById("todo-title").value = "";
@@ -28,19 +26,16 @@ const openModal = () => {
 
   close_project_modal.addEventListener("click", () => {
     modal_one.classList.remove("show");
-    Clear()
-    Tabbing()
   });
 
   confirm_project.addEventListener("click", () => {
     modal_one.classList.remove("show")
-    Clear()
   });
   
   confirm_todo.addEventListener("click", () => {
     modal_two.classList.remove("show")
-    Clear()
     addTodo()
+    Clear()
   });
 
   addtodo_button.addEventListener("click", () => {
@@ -54,8 +49,7 @@ const openModal = () => {
   })
 
   dropdown.addEventListener("click", () => {
-    priority_content.classList.add("show")    
-
+    priority_content.classList.add("show")
   })
 }
 

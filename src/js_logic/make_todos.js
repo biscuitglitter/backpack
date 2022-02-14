@@ -9,7 +9,6 @@ const addTodo = () => {
   let task = new Todo(document.getElementById("todo-title").value, document.getElementById("todo-priority").innerText);
 
   const container = document.getElementById("container")
-
   const wrapper = document.createElement("div")
   wrapper.id = "wrapper"
 
@@ -18,10 +17,8 @@ const addTodo = () => {
   checkbox.classList.add("checkbox")
   wrapper.appendChild(checkbox)
   
-  const todo = document.createElement("p")
-  
-  todo.className = "todo-title"
-  
+  const todo = document.createElement("p")  
+  todo.className = "todo-title"  
   todo.innerText = `${task.title}`
 
   container.appendChild(wrapper)
@@ -30,4 +27,4 @@ const addTodo = () => {
 }
   
 export { addTodo };
-  
+
