@@ -32,3 +32,13 @@ confirm_project.addEventListener("click", () => {
   selectProject()
 });
 
+const findProject = () => {
+  document.querySelectorAll(".project").forEach((proj) => {
+    proj.addEventListener("click", () => {
+      document.querySelectorAll(".project").forEach((project) => { 
+        console.log(project.task)
+      })
+    })
+  })
+}
+findProject()

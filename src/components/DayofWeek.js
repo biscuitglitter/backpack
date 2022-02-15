@@ -7,7 +7,7 @@ const DayofWeek = () => {
   let week = [
     "Sunday",
     "Monday",
-    "Ttuesday",
+    "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",

@@ -24,9 +24,21 @@ const makeTodo = () => {
 
   console.log(task)
 
+  document.querySelectorAll(".project").forEach((proj) => {
+    if (task.project === proj.firstChild.innerText) {
+      wrapper.dataset.target = proj.firstChild.innerText
+    } else {
+      wrapper.dataset.target = "Home"
+          }
+  }) 
+  
   container.appendChild(wrapper);
   wrapper.appendChild(checkbox);
   wrapper.appendChild(todo);
 };
 
 export { makeTodo };
+
+const displayingTodos = () => {
+  
+}

@@ -118,11 +118,18 @@ p, h1, h2, h3, h4, h5, h6 {
   padding-top: 8px;
   padding-bottom: 8px;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .project:hover {
   background: hsl(223, 7%, 98%);
   cursor: pointer;
+}
+
+.project.selected {
+  background: hsl(222, 84%, 56%);
+  color: #fff;
+  border-radius: 4px;
 }
 
 #greeting-message {
