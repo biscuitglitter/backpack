@@ -34,7 +34,7 @@ const Modal = () => {
     close_button.innerText = "Cancel"
 
     const add_button = document.createElement("div")
-    add_button.id = "add"
+    add_button.id = "confirm-project"
     buttons_project.appendChild(add_button)
     add_button.innerText = "Add"
 
@@ -100,7 +100,7 @@ const Modal = () => {
     cancel_button.innerText = "Cancel"
 
     const agree_button = document.createElement("div")
-    agree_button.id = "agree"
+    agree_button.id = "confirm-todo"
     buttons_questions.appendChild(agree_button)
     agree_button.innerText = "Add to-do"
    

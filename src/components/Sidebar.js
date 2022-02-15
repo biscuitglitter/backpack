@@ -19,6 +19,7 @@ const Sidebar = () => {
     
     const home = document.createElement("div")
     home.id = "home"
+    home.classList.add("selected")
     sidebar_top.appendChild(home)
 
     const textone = document.createElement("h2")

@@ -167,7 +167,7 @@ h2 {
   cursor: pointer;
 }
 
-#projectsbtn {
+#add-project {
   border: none;
   background: none;
   color: hsl(356, 85%, 57%);
@@ -357,7 +357,7 @@ input#project-name:focus::placeholder, input#todo-title:focus::placeholder, inpu
   padding: 8px;
 }
 
-#cancel, #add, #agree, #close { 
+#cancel, #confirm-project, #confirm-todo, #close { 
   display: inline-block;
   outline: 0;
   font-size: 13px;
@@ -371,7 +371,7 @@ input#project-name:focus::placeholder, input#todo-title:focus::placeholder, inpu
   padding-top: 3px;
  }
 
- #add, #agree {
+ #confirm-project, #confirm-todo {
   background: hsl(356, 85%, 57%);
   color: #fff
  }
@@ -464,6 +464,3 @@ a:hover {
 .checkbox {
   cursor: pointer;
 }
-
-
-

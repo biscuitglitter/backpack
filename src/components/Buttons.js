@@ -7,7 +7,7 @@ const Buttons = () => {
 
     const projectsbtn = document.createElement("button")
     projectsbtn.innerText = "+"
-    projectsbtn.id = "projectsbtn"
+    projectsbtn.id = "add-project"
     btn_container.appendChild(projectsbtn)
 
     return btn_container

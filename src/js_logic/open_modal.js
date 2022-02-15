@@ -1,4 +1,5 @@
-import { addTodo } from "./make_todos"
+import { makeProject } from "./make_project";
+import { makeTodo } from "./make_todos"
 
 const Clear = () => {
   document.getElementById("todo-title").value = "";
@@ -11,9 +12,9 @@ const openModal = () => {
 
   const close_project_modal = document.getElementById("close");
   const cancel = document.getElementById("cancel")
-  const add_project = document.getElementById("projectsbtn");
-  const confirm_project = document.getElementById("add");
-  const confirm_todo = document.getElementById("agree");
+  const add_project = document.getElementById("add-project");
+  const confirm_project = document.getElementById("confirm-project");
+  const confirm_todo = document.getElementById("confirm-todo");
 
   const dropdown = document.getElementById("dropdown")
   const priority_content = document.getElementById("priority-content")
@@ -30,11 +31,12 @@ const openModal = () => {
 
   confirm_project.addEventListener("click", () => {
     modal_one.classList.remove("show")
+    makeProject()
   });
   
   confirm_todo.addEventListener("click", () => {
     modal_two.classList.remove("show")
-    addTodo()
+    makeTodo()
     Clear()
   });
 

@@ -17,7 +17,6 @@ const Navbar = () => {
     taskbutton.innerText = "+"
     navbar_content.appendChild(taskbutton)
 
-
     return navbar_container
 }
 

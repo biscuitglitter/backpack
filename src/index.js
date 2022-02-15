@@ -1,11 +1,9 @@
 import { loading_page } from "./loading_page";
-import { DayofWeek } from "./components/get_day";
-import { openModal, Priority, Clear } from "./js_logic/modal";
-import { makeProject } from "./js_logic/make_project";
+import { DayofWeek } from "./components/DayofWeek";
+import { openModal, Priority, Clear } from "./js_logic/open_modal";
 
 loading_page();
 DayofWeek();
-makeProject();
 openModal();
 Priority();
 
@@ -14,6 +12,7 @@ const selectProject = () => {
     item.addEventListener("click", (e) => {
       document.querySelectorAll(".project").forEach((project) => { 
         project.classList.remove("selected")
+        document.getElementById("home").classList.remove("selected")
       })
       const curr = e.target.parentNode
       curr.classList.add("selected")
@@ -21,10 +20,8 @@ const selectProject = () => {
   })
 }
 
-/* todos, projects */
-
-const confirm_todo = document.getElementById("agree");
-const confirm_project = document.getElementById("add");
+const confirm_todo = document.getElementById("confirm-todo");
+const confirm_project = document.getElementById("confirm-project");
 
 confirm_todo.addEventListener("click", () => {
   Clear();

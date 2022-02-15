@@ -1,25 +1,31 @@
-const makeProject = () => {
-  let arr_project = [];
-  const add = document.getElementById("add");
-  const projectName = document.getElementById("project-name");
-  const projectsContainer = document.getElementById("projects-container");
-
-  add.addEventListener("click", () => {
-    const div = document.createElement("div");
-    div.className = "project";
-    const li = document.createElement("li");
-    div.append(li);
-    projectsContainer.appendChild(div);
-    li.innerText = projectName.value;
-
-    arr_project.push(div);
-    // for (let i = 0; i < arr_project.length; i++) {
-    //   div.id = "target"+i; 
-    // }      
-  });  
+let Project = class {
+  constructor(title) {
+    this.title = title;
+  }
 };
 
-export { makeProject };
+
+const makeProject = () => {
+    const container = document.getElementById("projects-container");
+
+    let project = new Project(document.getElementById("project-name").value);
+    let project_todos = [];
+    
+    const proj = document.createElement("div")
+    proj.className = "project"
+    const text = document.createElement("p")
+    text.className = "text"
+    text.innerText = `${project.title}`
+
+    project_todos.push(proj);
+
+    console.log(proj)
+    console.log(project_todos)
+
+    container.appendChild(proj)
+    proj.appendChild(text)   
+};
 
 
 
+ export { makeProject };
