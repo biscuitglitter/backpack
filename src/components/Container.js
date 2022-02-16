@@ -8,7 +8,7 @@ const Container = () => {
     const current = document.createElement("h2")
     current.id = ("current-tab")
     container.appendChild(current)
-    
+
     return container
 }
 

@@ -21,16 +21,21 @@ const openModal = () => {
 
   const addtodo_button = document.getElementById("addtodo-button")
 
+  const overlay = document.querySelector(".overlay.hide")
+
   add_project.addEventListener("click", () => {
     modal_one.classList.add("show");
+    overlay.classList.remove("hide");
   });
 
   close_project_modal.addEventListener("click", () => {
     modal_one.classList.remove("show");
+    overlay.classList.add("hide");
   });
 
   confirm_project.addEventListener("click", () => {
     modal_one.classList.remove("show")
+    overlay.classList.add("hide");
     makeProject()
   });
   
@@ -38,16 +43,19 @@ const openModal = () => {
     modal_two.classList.remove("show")
     makeTodo()
     Clear()
+    overlay.classList.add("hide");
   });
 
   addtodo_button.addEventListener("click", () => {
     modal_one.classList.remove("show")
     modal_two.classList.add("show")
+    overlay.classList.remove("hide");
   });
 
   cancel.addEventListener("click", () => {
     modal_two.classList.remove("show")
     modal_one.classList.remove("show")
+    overlay.classList.add("hide");
   })
 
   dropdown.addEventListener("click", () => {

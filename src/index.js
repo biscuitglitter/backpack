@@ -1,9 +1,16 @@
 import { loading_page } from "./loading_page";
 import { DayofWeek } from "./components/DayofWeek";
 import { openModal, Priority, Clear } from "./js_logic/open_modal";
-import {selectProject } from "./js_logic/make_project"
+import { selectProject } from "./js_logic/make_project";
+
 
 loading_page();
+
+const overlay = document.createElement("div")
+overlay.classList.add("overlay")
+overlay.classList.add("hide")
+document.body.appendChild(overlay)
+
 DayofWeek();
 openModal();
 Priority();
@@ -17,7 +24,8 @@ confirm_todo.addEventListener("click", () => {
 
 confirm_project.addEventListener("click", () => {
   Clear();
-  selectProject()
+  selectProject();
 });
+
 
 
