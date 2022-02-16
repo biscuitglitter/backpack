@@ -13,17 +13,34 @@ const makeTodo = () => {
   const wrapper = document.createElement("div");
   wrapper.id = "wrapper";
 
+  const left_side = document.createElement("div")
+  left_side.id = "left-side"
+  wrapper.appendChild(left_side)
+  
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
   checkbox.classList.add("checkbox");
-  wrapper.appendChild(checkbox);
   wrapper.dataset.target = "Home"
 
   const todo = document.createElement("p");
   todo.className = "todo-title";
   todo.innerText = `${task.title}`;
 
-  console.log(task)
+  const right_side = document.createElement("div")
+  right_side.id = "right-side"  
+
+  const priorities = document.createElement("div")
+  priorities.id = "priorities" 
+
+  if (document.getElementById("todo-priority").innerText === null) return
+
+  if (document.getElementById("todo-priority").innerText === "Medium priority") {
+    document.getElementById("priorities").classList.add("medium")
+  } 
+
+  const x_button = document.createElement("button")
+  x_button.id = "x-button"
+  x_button.innerText = "X"
 
   document.querySelectorAll(".project").forEach((proj) => {
     if (task.project === proj.firstChild.innerText) {
@@ -32,8 +49,12 @@ const makeTodo = () => {
   }) 
 
   container.appendChild(wrapper);
-  wrapper.appendChild(checkbox);
-  wrapper.appendChild(todo);
+  wrapper.appendChild(left_side)
+  left_side.appendChild(checkbox);
+  left_side.appendChild(todo);
+  wrapper.appendChild(right_side);
+  right_side.appendChild(priorities)
+  right_side.appendChild(x_button);
 };
 
 export { makeTodo };

@@ -13,6 +13,9 @@ const loading_page = () => {
     Buttons()
     Container()
     Modal()
+
+    const tab = document.getElementById("current-tab")
+    tab.innerText = "Home"
 }
 
 export { loading_page }
