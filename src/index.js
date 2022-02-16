@@ -2,7 +2,7 @@ import { loading_page } from "./loading_page";
 import { DayofWeek } from "./components/DayofWeek";
 import { openModal, Priority, Clear } from "./js_logic/open_modal";
 import { selectProject } from "./js_logic/make_project";
-
+import { findTarget, displayAll } from "./js_logic/display_todos"
 
 loading_page();
 
@@ -27,5 +27,5 @@ confirm_project.addEventListener("click", () => {
   selectProject();
 });
 
-
-
+displayAll()
+findTarget()
