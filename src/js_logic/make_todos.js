@@ -17,6 +17,7 @@ const makeTodo = () => {
   checkbox.type = "checkbox";
   checkbox.classList.add("checkbox");
   wrapper.appendChild(checkbox);
+  wrapper.dataset.target = "Home"
 
   const todo = document.createElement("p");
   todo.className = "todo-title";
@@ -27,11 +28,9 @@ const makeTodo = () => {
   document.querySelectorAll(".project").forEach((proj) => {
     if (task.project === proj.firstChild.innerText) {
       wrapper.dataset.target = proj.firstChild.innerText
-    } else {
-      wrapper.dataset.target = "Home"
-          }
+    }
   }) 
-  
+
   container.appendChild(wrapper);
   wrapper.appendChild(checkbox);
   wrapper.appendChild(todo);
@@ -39,6 +38,3 @@ const makeTodo = () => {
 
 export { makeTodo };
 
-const displayingTodos = () => {
-  
-}

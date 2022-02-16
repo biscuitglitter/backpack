@@ -21,6 +21,19 @@ const makeProject = () => {
     proj.appendChild(text)   
 };
 
- export { makeProject };
+const selectProject = () => {
+  document.querySelectorAll(".project").forEach((item) => {
+    item.addEventListener("click", (e) => {
+      document.querySelectorAll(".project").forEach((project) => { 
+        project.classList.remove("selected")
+        document.getElementById("home").classList.remove("selected")
+      })
+      const curr = e.target.parentNode
+      curr.classList.add("selected")
+    })
+  })
+}
+
+ export { makeProject, selectProject };
 
   
