@@ -42,7 +42,6 @@ const makeTodo = () => {
       wrapper.dataset.target = proj.firstChild.innerText
     }
   }) 
-  console.log(wrapper)
 
   container.appendChild(wrapper);
   wrapper.appendChild(left_side)
@@ -61,7 +60,6 @@ const makeTodo = () => {
     priorities.classList.add("low")
 
   }
-console.log(document.getElementById("todo-priority").innerText)
 };
 
 

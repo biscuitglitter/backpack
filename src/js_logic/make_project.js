@@ -30,6 +30,7 @@ const selectProject = () => {
       });
       const curr = e.target.parentNode;
       curr.classList.add("selected");
+      curr.firstChild.classList.add("selected-text")
     });
   });
 };

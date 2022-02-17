@@ -128,13 +128,15 @@ p, h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 
+
+
 /* sidebar */
 
 .sidebar {
   display: flex;
   flex-direction: column;
-  min-width: 250px;
-  max-width: 250px;
+  min-width: 17.4vw;
+  max-width: 17.9vw;
   background: hsl(224, 7%, 96%, 0.4);
   padding: 8px 12px;
   padding-top: 38px;
@@ -170,6 +172,13 @@ p, h1, h2, h3, h4, h5, h6 {
 .currently {
   background: hsl(223, 7%, 98%);
   color: black;
+}
+
+.text {
+  color: #143f75
+}
+.selected-text {
+  color: #fff;
 }
 
 #greeting-message {
@@ -339,7 +348,6 @@ input#project-name:focus::placeholder, input#todo:focus::placeholder {
   z-index: 1000;
 }
 
-
 #modal-two {
   display: flex;
   flex-direction: column;
@@ -347,7 +355,7 @@ input#project-name:focus::placeholder, input#todo:focus::placeholder {
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   width: 350px;
-  height: 300px;
+  height: 200px;
   gap: 15px;
   text-align: center;
   background: white;
@@ -355,16 +363,12 @@ input#project-name:focus::placeholder, input#todo:focus::placeholder {
   transition: transform 0.3s ease;
 }
 
-#modal-questions {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 200px;
-  margin: 5px 5px;
-  margin-top: 22px;
+#cont {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 33px;
 }
-
 #todo-title, #todo-description, #priority-container {
   background: hsl(210, 9%, 96%);
   height: 70px;
@@ -420,7 +424,7 @@ input#project-name:focus::placeholder, input#todo:focus::placeholder {
  }
 
  #confirm-project, #confirm-todo {
-  background: hsl(356, 85%, 57%);
+  background: hsl(45, 94%, 53%);
   color: #fff
  }
 
@@ -499,7 +503,7 @@ a:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 500px;
+  width: 650px;
   min-height: 40px;
   max-height: 40px; 
   text-align: center;
@@ -558,4 +562,30 @@ visibility: hidden;
 .hide {
   visibility: hidden;
   opacity: 0;
+}
+
+#welcome {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  margin-top: -90px;  
+  margin-left: -150px;  
+}
+
+.welcome-text {
+  color: rgb(20, 63, 117);
+  font-size: 35px;
+}
+
+.small-text {
+  color: rgb(20, 63, 117, 0.9);
+  font-size: 19px;
+  text-decoration: none;
 }
