@@ -6,16 +6,13 @@ let Project = class {
 
 const makeProject = () => {
   const container = document.getElementById("projects-container");
-
   let project = new Project(document.getElementById("project-name").value);
-
   const proj = document.createElement("div");
   proj.className = "project";
   const text = document.createElement("p");
   text.className = "text";
   text.innerText = `${project.title}`;
   proj.dataset.target = `${project.title}`;
-
   container.appendChild(proj);
   proj.appendChild(text);
 };
@@ -30,7 +27,6 @@ const selectProject = () => {
       });
       const curr = e.target.parentNode;
       curr.classList.add("selected");
-      curr.firstChild.classList.add("selected-text")
     });
   });
 };

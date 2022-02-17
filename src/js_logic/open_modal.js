@@ -6,10 +6,21 @@ const Clear = () => {
   document.getElementById("project-name").value = "";
 }
 
+const removingTodos = () => {
+  document.querySelectorAll("#x-button").forEach((item) => {
+    item.addEventListener("click", () => {
+      const clicked = item.parentElement.parentElement
+      if (document.querySelector("#welcome.activate")) {
+        document.getElementById("welcome").classList.remove("activate")
+      }
+      clicked.remove()
+    })
+  })
+}
+
 const openModal = () => {  
   const modal_one = document.getElementById("modal-container-one");
   const modal_two = document.getElementById("modal-container-two");
-
   const close_project_modal = document.getElementById("close");
   const cancel = document.getElementById("cancel")
   const add_project = document.getElementById("add-project");
@@ -24,6 +35,7 @@ const openModal = () => {
   add_project.addEventListener("click", () => {
     modal_one.classList.add("show");
     overlay.classList.remove("hide");
+    document.getElementById("welcome").classList.remove("activate")
   });
 
   close_project_modal.addEventListener("click", () => {
@@ -43,12 +55,15 @@ const openModal = () => {
     todo_priority.innerText = "Priority"
     Clear()
     overlay.classList.add("hide");
+    removingTodos()
   });
 
-  addtodo_button.addEventListener("click", () => {
-   modal_one.classList.remove("show")
+    addtodo_button.addEventListener("click", () => {
+    if (document.getElementById("todo").value === "") return
+    modal_one.classList.remove("show")
     modal_two.classList.add("show")
     overlay.classList.remove("hide")
+    document.getElementById("welcome").classList.remove("activate")
   });
 
   cancel.addEventListener("click", () => {
@@ -73,9 +88,7 @@ const Priority = () => {
       todo_priority.innerText = choice
       priority_content.classList.remove("show")
     })
-  })
-
-  
+  }) 
 }
 
-export { openModal, Priority, Clear };
+export { openModal, Priority, Clear, removingTodos };

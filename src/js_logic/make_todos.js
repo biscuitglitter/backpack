@@ -55,14 +55,52 @@ const makeTodo = () => {
     priorities.classList.add("high")
   } else if (task.priority === "Medium priority") {
     priorities.classList.add("medium")
-
   } else if (task.priority === "Low priority") {
     priorities.classList.add("low")
-
   }
 };
 
+const Bydefault = () => {
+  let task = new Todo("Your first task", "High priority", "Home")
 
-export { makeTodo };
+  const container = document.getElementById("container");
+  const wrapper = document.createElement("div");
+  wrapper.id = "wrapper";
+
+  const left_side = document.createElement("div")
+  left_side.id = "left-side" 
+  wrapper.appendChild(left_side)
+  
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.classList.add("checkbox");
+  wrapper.dataset.target = "Home"
+
+  const todo = document.createElement("p");
+  todo.className = "todo-title";
+  todo.innerText = `${task.title}`
+
+  const right_side = document.createElement("div")
+  right_side.id = "right-side"  
+
+  const priorities = document.createElement("div")
+  priorities.id = "priorities" 
+  priorities.classList.add("medium")
+  const x_button = document.createElement("button")
+  x_button.id = "x-button"
+  x_button.innerText = "X"
+
+  task.project = "Home"
+
+  container.appendChild(wrapper);
+  wrapper.appendChild(left_side)
+  left_side.appendChild(checkbox);
+  left_side.appendChild(todo);
+  wrapper.appendChild(right_side);
+  right_side.appendChild(priorities)
+  right_side.appendChild(x_button);
+}
+
+export { makeTodo, Bydefault };
 
 
