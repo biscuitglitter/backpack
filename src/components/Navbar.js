@@ -7,9 +7,10 @@ const Navbar = () => {
     navbar_content.id = "navbar-content"
     navbar_container.appendChild(navbar_content)
 
-    const div = document.createElement("div")
-    div.id = "search"
-    div.innerText = "Want to add a to-do?"    
+    const div = document.createElement("input")
+    div.type = "text"
+    div.id = "todo"
+    div.placeholder = "What do you want to name it?"    
     navbar_content.appendChild(div)
 
     const taskbutton = document.createElement("button")

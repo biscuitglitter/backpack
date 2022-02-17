@@ -47,7 +47,7 @@ p, h1, h2, h3, h4, h5, h6 {
 #navbar-container {
   height: 55px;
   width: 100vw;
-  background: hsl(356, 85%, 57%);
+  background: #194f92;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -113,18 +113,19 @@ p, h1, h2, h3, h4, h5, h6 {
   background: none;
 }
 
-#search {
-  background: #de1220;
+#todo {
+  background: #fff;
   border-radius: 4px;
   width: 220px;
   height: 40px;
   font-size: 13px;
-  color: rgba(255, 246, 246, 0.842);
+  color: #143f75;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  pointer-events: none;
+  border: none;
+  outline: none;
 }
 
 /* sidebar */
@@ -134,7 +135,7 @@ p, h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   min-width: 250px;
   max-width: 250px;
-  background: hsl(224, 7%, 96%);
+  background: hsl(224, 7%, 96%, 0.4);
   padding: 8px 12px;
   padding-top: 38px;
   height: 100vh;
@@ -161,7 +162,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .project.selected {
-  background: hsl(222, 84%, 56%);
+  background: hsl(45, 94%, 53%, 0.7);
   color: #fff;
   border-radius: 4px;
 }
@@ -182,15 +183,7 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   font-weight: 550;
   font-style: italic;
-}
-
-
-
-h1 {
-  font-size: 13px;
-  font-weight: 600;
-  padding: 0 8px;
-  padding-bottom: 10px;
+  color: #194f92;
 }
 
 #home, #projects {
@@ -201,6 +194,7 @@ h1 {
   justify-content: space-between;
   text-align: center;
   cursor: pointer;
+  color: #194f92;
 }
 
 #home:hover, #projects:hover {
@@ -218,7 +212,7 @@ h2 {
 #add-project {
   border: none;
   background: none;
-  color: hsl(356, 85%, 57%);
+  color: hsl(45, 94%, 53%);
   font-size: 15px;
   cursor: pointer;
   text-align: center;
@@ -290,11 +284,15 @@ h2 {
   margin-top: 40px;
 }
 
-input#project-name::placeholder, input#todo-title::placeholder, input#todo-description::placeholder {
+input#project-name::placeholder {
   color: hsl(55, 0%, 44%, 0.8)
 }
 
-input#project-name:focus::placeholder, input#todo-title:focus::placeholder, input#todo-description:focus::placeholder {
+input#todo::placeholder {
+  color: #143f75;
+}
+
+input#project-name:focus::placeholder, input#todo:focus::placeholder {
   color: transparent;
 }
 
@@ -491,6 +489,9 @@ a:hover {
   font-size: 17px;
   padding-bottom: 22px;
   text-align: left;
+  color: hsl(45, 94%, 53%);
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
 }
 
 #wrapper {
@@ -504,10 +505,26 @@ a:hover {
   text-align: center;
 }
 
+#priorities.high {
+  width: 20px;
+  height: 20px;
+  background: hsl(7, 89%, 55%);
+  border-radius: 50%;
+  visibility: visible;
+}
+
 #priorities.medium {
   width: 20px;
   height: 20px;
-  background: orange;
+  background: hsl(45, 94%, 53%);
+  border-radius: 50%;
+  visibility: visible;
+}
+
+#priorities.low {
+  width: 20px;
+  height: 20px;
+  background: hsl(53, 44%, 78%);
   border-radius: 50%;
   visibility: visible;
 }
@@ -533,7 +550,7 @@ visibility: hidden;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(2px);
   z-index: 100;
   transition: all 0.5s;
 }

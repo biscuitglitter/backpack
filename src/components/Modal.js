@@ -52,10 +52,10 @@ const Modal = () => {
     modal_questions.id = "modal-questions"
     modal_two.appendChild(modal_questions)
 
-    const title = document.createElement("input")
-    title.id = "todo-title"
-    title.placeholder = "What do you want to name it?"
-    modal_questions.appendChild(title)
+    // const title = document.createElement("input")
+    // title.id = "todo-title"
+    // title.placeholder = "What do you want to name it?"
+    // modal_questions.appendChild(title)
 
     const priority = document.createElement("div")
     priority.id = "priority-container"

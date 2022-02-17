@@ -12,10 +12,6 @@ const Sidebar = () => {
     const projects_container = document.createElement("div")
     projects_container.id = "projects-container"
     sidebar.appendChild(projects_container)
-
-    const firstH1 = document.createElement("h1")
-    firstH1.innerText = "ACTIONS"
-    sidebar_top.appendChild(firstH1)
     
     const home = document.createElement("div")
     home.id = "home"

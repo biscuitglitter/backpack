@@ -2,7 +2,7 @@ import { makeProject } from "./make_project";
 import { makeTodo } from "./make_todos"
 
 const Clear = () => {
-  document.getElementById("todo-title").value = "";
+  document.getElementById("todo").value = "";
   document.getElementById("project-name").value = "";
 }
 
@@ -15,13 +15,11 @@ const openModal = () => {
   const add_project = document.getElementById("add-project");
   const confirm_project = document.getElementById("confirm-project");
   const confirm_todo = document.getElementById("confirm-todo");
-
   const dropdown = document.getElementById("dropdown")
   const priority_content = document.getElementById("priority-content")
-
   const addtodo_button = document.getElementById("addtodo-button")
-
   const overlay = document.querySelector(".overlay.hide")
+  const todo_priority = document.getElementById("todo-priority")
 
   add_project.addEventListener("click", () => {
     modal_one.classList.add("show");
@@ -42,14 +40,15 @@ const openModal = () => {
   confirm_todo.addEventListener("click", () => {
     modal_two.classList.remove("show")
     makeTodo()
+    todo_priority.innerText = "Priority"
     Clear()
     overlay.classList.add("hide");
   });
 
   addtodo_button.addEventListener("click", () => {
-    modal_one.classList.remove("show")
+   modal_one.classList.remove("show")
     modal_two.classList.add("show")
-    overlay.classList.remove("hide");
+    overlay.classList.remove("hide")
   });
 
   cancel.addEventListener("click", () => {
@@ -75,6 +74,8 @@ const Priority = () => {
       priority_content.classList.remove("show")
     })
   })
+
+  
 }
 
 export { openModal, Priority, Clear };

@@ -7,14 +7,16 @@ let Todo = class {
 };
 
 const makeTodo = () => {
-  let task = new Todo(document.getElementById("todo-title").value, document.getElementById("todo-priority").innerText, document.querySelector(".selected").firstChild.innerText);
-
+  let value = document.getElementById("todo").value
+  let task = new Todo(value,
+    document.getElementById("todo-priority").innerText, document.querySelector(".selected").firstChild.innerText);
+  
   const container = document.getElementById("container");
   const wrapper = document.createElement("div");
   wrapper.id = "wrapper";
 
   const left_side = document.createElement("div")
-  left_side.id = "left-side"
+  left_side.id = "left-side" 
   wrapper.appendChild(left_side)
   
   const checkbox = document.createElement("input");
@@ -24,20 +26,13 @@ const makeTodo = () => {
 
   const todo = document.createElement("p");
   todo.className = "todo-title";
-  todo.innerText = `${task.title}`;
+  todo.innerText = `${task.title}`
 
   const right_side = document.createElement("div")
   right_side.id = "right-side"  
 
   const priorities = document.createElement("div")
   priorities.id = "priorities" 
-
-  if (document.getElementById("todo-priority").innerText === null) return
-
-  if (document.getElementById("todo-priority").innerText === "Medium priority") {
-    document.getElementById("priorities").classList.add("medium")
-  } 
-
   const x_button = document.createElement("button")
   x_button.id = "x-button"
   x_button.innerText = "X"
@@ -47,6 +42,7 @@ const makeTodo = () => {
       wrapper.dataset.target = proj.firstChild.innerText
     }
   }) 
+  console.log(wrapper)
 
   container.appendChild(wrapper);
   wrapper.appendChild(left_side)
@@ -55,7 +51,20 @@ const makeTodo = () => {
   wrapper.appendChild(right_side);
   right_side.appendChild(priorities)
   right_side.appendChild(x_button);
+
+  if (task.priority === "High priority") {
+    priorities.classList.add("high")
+  } else if (task.priority === "Medium priority") {
+    priorities.classList.add("medium")
+
+  } else if (task.priority === "Low priority") {
+    priorities.classList.add("low")
+
+  }
+console.log(document.getElementById("todo-priority").innerText)
 };
 
+
 export { makeTodo };
+
 
