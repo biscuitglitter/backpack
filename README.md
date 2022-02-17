@@ -5,4 +5,4 @@ A task can hold a name, date, parent project, and priority.
 
 it was created as part of the odin project curriculum with the purpose of learning SOLID principles
 
-you can check it out here: https://miuhuru.github.io/backpack/
+you can check out my progress here: https://miuhuru.github.io/backpack/
