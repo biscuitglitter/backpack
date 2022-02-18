@@ -170,11 +170,6 @@ project.styled {
   color: #fff;
 }
 
-.currently {
-  background: hsl(223, 7%, 98%);
-  color: black;
-}
-
 .text {
   color: #143f75
 }
@@ -190,7 +185,7 @@ project.styled {
   font-size: 14px;
   font-weight: 550;
   font-style: italic;
-  color: #194f92;
+  color: #143f75;
 }
 
 #home, #projects {
@@ -305,6 +300,11 @@ input#project-name:focus::placeholder, input#todo:focus::placeholder {
 
 #project-name:focus {
   border: none;
+  outline: none;
+}
+
+.todo-title:focus {
+  border: grey 0.5px solid;
   outline: none;
 }
 
@@ -592,4 +592,17 @@ visibility: hidden;
   color: rgb(20, 63, 117, 0.95);
   font-size: 17px;
   text-decoration: none;
+}
+
+#home:focus {
+  background: hsl(223, 7%, 98%);
+  color: black;
+}
+
+#home.current {
+  background: hsl(55, 100%, 50%, 0.5);
+}
+
+#home.current:focus {
+  background: hsl(55, 100%, 50%, 0.5);
 }

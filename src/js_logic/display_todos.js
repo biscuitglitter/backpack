@@ -22,7 +22,7 @@ const findTarget = () => {
 const displayAll = () => {
   document.getElementById("home").addEventListener("click", () => {
     if (!document.querySelectorAll("#wrapper")) return;
-    document.getElementById("home").classList.add("currently");
+    document.getElementById("home").classList.add("current");
     document
       .querySelectorAll(".project")
       .forEach((project) => project.classList.remove("selected"));

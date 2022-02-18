@@ -23,7 +23,7 @@ const selectProject = () => {
       document.querySelectorAll(".project").forEach((project) => {
         project.classList.remove("selected");
         document.getElementById("home").classList.remove("selected");
-        document.getElementById("home").classList.remove("currently");
+        document.getElementById("home").classList.remove("current");
       });
       const curr = e.target.parentNode;
       curr.classList.add("selected");

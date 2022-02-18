@@ -12,6 +12,7 @@ const removingTodos = () => {
       const clicked = item.parentElement.parentElement
       if (document.querySelector("#welcome.activate")) {
         document.getElementById("welcome").classList.remove("activate")
+        document.getElementById("current-tab").innerText = "";
       }
       clicked.remove()
     })

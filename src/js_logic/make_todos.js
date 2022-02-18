@@ -8,9 +8,11 @@ let Todo = class {
 
 const makeTodo = () => {
   let value = document.getElementById("todo").value
-  let task = new Todo(value,
-    document.getElementById("todo-priority").innerText, document.querySelector(".selected").firstChild.innerText);
-  
+  let task = new Todo(
+    value,
+    document.getElementById("todo-priority").innerText,
+    document.querySelector(".selected").firstChild.innerText);
+    
   const container = document.getElementById("container");
   const wrapper = document.createElement("div");
   wrapper.id = "wrapper";
@@ -42,7 +44,6 @@ const makeTodo = () => {
       wrapper.dataset.target = proj.firstChild.innerText
     }
   }) 
-
   container.appendChild(wrapper);
   wrapper.appendChild(left_side)
   left_side.appendChild(checkbox);
@@ -58,10 +59,10 @@ const makeTodo = () => {
   } else if (task.priority === "Low priority") {
     priorities.classList.add("low")
   }
-};
+}
 
 const Bydefault = () => {
-  let task = new Todo("Your first task", "High priority", "Home")
+  let task = new Todo("your first task", "High priority", "Home")
 
   const container = document.getElementById("container");
   const wrapper = document.createElement("div");
@@ -99,8 +100,13 @@ const Bydefault = () => {
   wrapper.appendChild(right_side);
   right_side.appendChild(priorities)
   right_side.appendChild(x_button);
+  document.querySelector(".todo-title").contentEditable = "true";
+
 }
 
 export { makeTodo, Bydefault };
+
+
+
 
 
