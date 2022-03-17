@@ -14,4 +14,4 @@ i chose it after i read their book about making web apps <br>
 
 it was created as part of the odin project curriculum with the purpose of learning SOLID principles <br>
 
-you can check out my progress here: https://miuhuru.github.io/backpack/ <br>
+you can check out my progress here: https://bobpetitchat.github.io/backpack/ <br>
